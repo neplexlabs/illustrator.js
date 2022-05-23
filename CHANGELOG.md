@@ -8,6 +8,7 @@
 
 ### Features
 
+* add base api methods ([9b3316b](https://github.com/CesiumLabs/illustrator/commit/9b3316b327353bd01d46b2dd4fb1a5e83ca7dd3b))
 * initialize project base ([71e80d0](https://github.com/CesiumLabs/illustrator/commit/71e80d0a9dc4c20c45f4e2c2b09d9a8a6e9a77ee))
 
 
