@@ -1,1 +1,3 @@
-# illustrator
+# Illustrator
+
+JavaScript image processing library

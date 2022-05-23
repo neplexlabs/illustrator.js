@@ -1,20 +1,21 @@
 {
-  "name": "illustrator",
-  "version": "0.1.0",
+  "name": "illustrator.js",
+  "version": "0.1.0-dev",
   "description": "JavaScript image processing library",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.js"
   },
   "scripts": {
     "build": "rimraf dist && tsc",
+    "postbuild": "node scripts/postbuild.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "check": "tsc --noEmit",
     "docs": "typedoc --json docs/doc.json src/index.ts",
-    "format": "prettier --write src/**/*.{js,ts}",
+    "format": "prettier --write {src,scripts,test}/**/*.{js,ts}",
     "lint": "eslint --fix",
     "prepare": "husky install"
   },
@@ -30,7 +31,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IllustratorJS/illustrator.git"
+    "url": "git+https://github.com/CesiumLabs/illustrator.git"
   },
   "keywords": [
     "illustrator",
@@ -41,12 +42,12 @@
     "processing",
     "ijs"
   ],
-  "author": "IllustratorJS",
+  "author": "DevAndromeda <contact@dhunganakunjan.com.np>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IllustratorJS/illustrator/issues"
+    "url": "https://github.com/CesiumLabs/illustrator/issues"
   },
-  "homepage": "https://github.com/IllustratorJS/illustrator#readme",
+  "homepage": "https://github.com/CesiumLabs/illustrator#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-angular": "^16.2.4",
@@ -64,5 +65,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.21",
+    "tslib": "^2.4.0"
   }
 }
