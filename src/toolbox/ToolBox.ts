@@ -1,7 +1,7 @@
 import { SKRSContext2D } from "@napi-rs/canvas";
 import { Layer } from "../illustrator/Layer";
 
-export type HistoryCallback = (ctx: SKRSContext2D) => unknown;
+export type HistoryCallback = (ctx: SKRSContext2D) => Awaited<void>;
 
 export class ToolBox {
     public history: HistoryCallback[] = [];

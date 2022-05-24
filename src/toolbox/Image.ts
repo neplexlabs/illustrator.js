@@ -38,6 +38,8 @@ export class ImageTool extends ToolBox {
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             ctx.drawImage(image, dx, dy, dw!, dh!);
         });
+
+        return this;
     }
 
     public render() {

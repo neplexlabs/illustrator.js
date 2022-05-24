@@ -1,6 +1,7 @@
 import { Canvas, createCanvas, SKRSContext2D } from "@napi-rs/canvas";
 import { ToolBox } from "../toolbox/ToolBox";
 import { Illustrator } from "./Illustrator";
+import { LayerUtils } from "./LayerUtils";
 
 export interface LayerTransformationData {
     coordinates?: {
@@ -16,6 +17,7 @@ export class Layer {
     #ctx: SKRSContext2D;
     #locked = false;
     #hidden = false;
+    public utils: LayerUtils;
     public coordinates = {
         x: 0,
         y: 0
@@ -28,6 +30,7 @@ export class Layer {
         this.width = width ?? this.illustrator.width;
         this.#canvas = createCanvas(this.width, this.height);
         this.#ctx = this.#canvas.getContext("2d");
+        this.utils = new LayerUtils(this.#ctx);
     }
 
     public createTransformation(data: LayerTransformationData) {
@@ -62,6 +65,14 @@ export class Layer {
     public show() {
         this.#hidden = false;
         return this;
+    }
+
+    public save() {
+        this.#ctx.save();
+    }
+
+    public restore() {
+        this.#ctx.restore();
     }
 
     public async applyTool(tool: ToolBox) {
