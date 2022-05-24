@@ -4,3 +4,4 @@ export * from "./BackgroundColor";
 export * from "./Filter";
 export * from "./Text";
 export * from "./Shadow";
+export * from "./ConvolutionFilter";

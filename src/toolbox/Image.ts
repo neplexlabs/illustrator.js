@@ -36,7 +36,8 @@ export class ImageTool extends ToolBox {
     public draw(image: Image, dx: number, dy: number, dw?: number, dh?: number) {
         this.history.push((ctx) => {
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            ctx.drawImage(image, dx, dy, dw!, dh!);
+            if ([dw, dh].every((x) => typeof x === "number")) return ctx.drawImage(image, dx, dy, dw!, dh!);
+            return ctx.drawImage(image, dx, dy);
         });
 
         return this;
