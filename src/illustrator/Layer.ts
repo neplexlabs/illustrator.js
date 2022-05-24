@@ -77,6 +77,7 @@ export class Layer {
 
     public async applyTool(tool: ToolBox) {
         this.#throwIfLocked();
+        if (!(tool instanceof ToolBox)) throw new Error("tool must be a ToolBox instance");
         await Promise.all(tool.history.map((m) => m(this.#ctx)));
     }
 
