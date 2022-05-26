@@ -1,5 +1,6 @@
 import { ToolBox } from "./ToolBox";
 import { GlobalFonts } from "@napi-rs/canvas";
+import { makeArgs } from "../utils/makeArgs";
 
 export class TextTool extends ToolBox {
     public registerFont(font: Buffer, nameAlias?: string) {
@@ -46,9 +47,9 @@ export class TextTool extends ToolBox {
         return this;
     }
 
-    public setFont(name: string, size: string) {
+    public setFont(name: string, size: string, style?: string) {
         this.history.push((ctx) => {
-            ctx.font = `${size} ${name}`;
+            ctx.font = `${style ? style + " " : ""}${name}${size ? " " + size : ""}`;
         });
 
         return this;
@@ -72,7 +73,8 @@ export class TextTool extends ToolBox {
 
     public writeText(text: string, x: number, y: number, maxWidth?: number) {
         this.history.push((ctx) => {
-            ctx.fillText(text, x, y, maxWidth);
+            // @ts-expect-error
+            ctx.fillText(...makeArgs((el) => el != null, [text, x, y, maxWidth]));
         });
 
         return this;
@@ -80,7 +82,8 @@ export class TextTool extends ToolBox {
 
     public strokeText(text: string, x: number, y: number, maxWidth?: number) {
         this.history.push((ctx) => {
-            ctx.strokeText(text, x, y, maxWidth);
+            // @ts-expect-error
+            ctx.strokeText(...makeArgs((el) => el != null, [text, x, y, maxWidth]));
         });
 
         return this;
