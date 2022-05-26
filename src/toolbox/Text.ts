@@ -89,6 +89,10 @@ export class TextTool extends ToolBox {
         return this;
     }
 
+    public measure(text: string) {
+        return this.layer.utils.measureText(text);
+    }
+
     public render() {
         this.layer.applyTool(this);
     }

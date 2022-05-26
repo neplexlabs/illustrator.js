@@ -7,6 +7,10 @@ export class LayerUtils {
         this.#ctx = ctx;
     }
 
+    public measureText(text: string) {
+        return this.#ctx.measureText(text);
+    }
+
     public createLinearGradient(x0: number, x1: number, y0: number, y1: number) {
         return this.#ctx.createLinearGradient(x0, x1, y0, y1);
     }

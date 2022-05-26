@@ -24,13 +24,28 @@ export class Layer {
     };
     public width: number;
     public height: number;
+    #exposed = false;
 
-    public constructor(public readonly illustrator: Illustrator, width?: number, height?: number) {
-        this.height = height ?? this.illustrator.height;
-        this.width = width ?? this.illustrator.width;
+    public constructor(
+        public readonly illustrator: Illustrator,
+        options?: {
+            width?: number;
+            height?: number;
+            exposeContext?: boolean;
+        }
+    ) {
+        this.height = options?.height ?? this.illustrator.height;
+        this.width = options?.width ?? this.illustrator.width;
         this.#canvas = createCanvas(this.width, this.height);
         this.#ctx = this.#canvas.getContext("2d");
         this.utils = new LayerUtils(this.#ctx);
+        if (options?.exposeContext) {
+            this.#exposed = true;
+        }
+    }
+
+    public get context() {
+        return this.#exposed ? this.#ctx : null;
     }
 
     public createTransformation(data: LayerTransformationData) {
