@@ -5,3 +5,5 @@ export * from "./Filter";
 export * from "./Text";
 export * from "./Shadow";
 export * from "./ConvolutionFilter";
+export * from "./shapes/BaseShapeTool";
+export * from "./shapes/Ellipse";

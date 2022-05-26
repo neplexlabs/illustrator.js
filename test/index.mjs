@@ -15,13 +15,40 @@ bgTool.fill(0, 0, illustrator.width, illustrator.height);
 bgTool.render();
 
 const layer2 = new Layer(illustrator);
-const textTool = new Tools.TextTool(layer2);
+const ellipse = new Tools.EllipseTool(layer2);
 
-textTool.setColor("#FFFFFF");
-textTool.setFont("PRIMETIME", "50px");
-textTool.setTextAlignment("center");
-textTool.writeText("Hello World", 300, 300);
-textTool.render();
+ellipse.setFillColor("#FFFFFF");
+ellipse.addPoint();
+ellipse.draw({
+    x: 100,
+    y: 100,
+    radiusX: 50,
+    radiusY: 75,
+    rotation: Math.PI / 4,
+    startAngle: 0,
+    endAngle: 2 * Math.PI
+})
+ellipse.fill();
+ellipse.removePoint();
+
+ellipse.setStrokeColor("#FFFFFF");
+ellipse.setLineWidth(12);
+ellipse.addPoint();
+ellipse.setLineDash([5, 5]);
+ellipse.draw({
+    x: 400,
+    y: 400,
+    radiusX: 50,
+    radiusY: 75,
+    rotation: Math.PI / 4,
+    startAngle: 0,
+    endAngle: 2 * Math.PI
+})
+ellipse.stroke();
+ellipse.removePoint();
+
+ellipse.render();
+
 illustrator.addLayer(layer2, "layer-2");
 
 const output = await illustrator.export({

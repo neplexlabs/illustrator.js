@@ -19,7 +19,7 @@ export class BaseShapeTool extends ToolBox {
         return this;
     }
 
-    public setStrokeWidth(width: number) {
+    public setLineWidth(width: number) {
         this.history.push((ctx) => {
             ctx.lineWidth = width;
         });
