@@ -5,7 +5,7 @@ export interface ConvolutionOptions {
     sx?: number;
     sy?: number;
     opaque?: boolean;
-    readonly weights: Array<number>;
+    readonly matrix: Array<number>;
     iterations?: number;
 }
 
@@ -21,7 +21,7 @@ export class ConvolutionTool extends ToolBox {
                     opaque: options.opaque ?? true,
                     sx: options.sx ?? 0,
                     sy: options.sy ?? 0,
-                    weights: options.weights,
+                    matrix: options.matrix,
                     // not required here
                     iterations: 0
                 });
@@ -32,7 +32,7 @@ export class ConvolutionTool extends ToolBox {
     }
 
     #convoluteInternal(options: Required<ConvolutionOptions> & { ctx: SKRSContext2D }) {
-        const side = Math.round(Math.sqrt(options.weights.length));
+        const side = Math.round(Math.sqrt(options.matrix.length));
         const halfSide = Math.floor(side / 2);
         const pixels = options.ctx.getImageData(
             options.sx,
@@ -69,7 +69,7 @@ export class ConvolutionTool extends ToolBox {
                         const scx = sx + cx - halfSide;
                         if (scy >= 0 && scy < sh && scx >= 0 && scx < sw) {
                             const srcOff = (scy * sw + scx) * 4;
-                            const wt = options.weights[cy * side + cx];
+                            const wt = options.matrix[cy * side + cx];
                             r += src[srcOff] * wt;
                             g += src[srcOff + 1] * wt;
                             b += src[srcOff + 2] * wt;
@@ -85,6 +85,16 @@ export class ConvolutionTool extends ToolBox {
         }
 
         options.ctx.putImageData(output, options.sx, options.sy);
+    }
+
+    public get matrices() {
+        return {
+            Identify: [0, 0, 0, 0, 1, 0, 0, 0, 0] as const,
+            Ridge: [-1, -1, -1 - 1, 8, -1, -1, -1, -1] as const,
+            Sharpen: [0, -1, 0, -1, 5, -1, 0, -1, 0] as const,
+            Blur: [1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9] as const,
+            Edge: [0, -1, 0, -1, 4, -1, 0, -1, 0] as const
+        };
     }
 
     public render() {
