@@ -10,6 +10,9 @@ export interface DrawEllipseOptions {
     endAngle: number;
     counterclockwise?: boolean;
 }
+
+export type DrawCircleOptions = Omit<DrawEllipseOptions, "radiusX" | "radiusY" | "rotation"> & { radius: number; };
+
 export class EllipseTool extends BaseShapeTool {
     public draw(options: DrawEllipseOptions) {
         return this.history.push((ctx) => {
@@ -20,6 +23,20 @@ export class EllipseTool extends BaseShapeTool {
                 options.radiusX,
                 options.radiusY,
                 options.rotation,
+                options.startAngle,
+                options.endAngle,
+                options.counterclockwise
+            );
+        });
+    }
+
+    public drawCircle(options: DrawCircleOptions) {
+        return this.history.push((ctx) => {
+            options.counterclockwise ??= false;
+            ctx.arc(
+                options.x,
+                options.y,
+                options.radius,
                 options.startAngle,
                 options.endAngle,
                 options.counterclockwise
