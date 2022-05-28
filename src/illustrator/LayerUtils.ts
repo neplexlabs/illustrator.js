@@ -11,6 +11,10 @@ export class LayerUtils {
         return this.#ctx.measureText(text);
     }
 
+    public getLayerTransformation() {
+        return this.#ctx.getTransform();
+    }
+
     public createLinearGradient(x0: number, x1: number, y0: number, y1: number) {
         return this.#ctx.createLinearGradient(x0, x1, y0, y1);
     }

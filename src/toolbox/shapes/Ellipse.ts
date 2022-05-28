@@ -11,7 +11,7 @@ export interface DrawEllipseOptions {
     counterclockwise?: boolean;
 }
 
-export type DrawCircleOptions = Omit<DrawEllipseOptions, "radiusX" | "radiusY" | "rotation"> & { radius: number; };
+export type DrawCircleOptions = Omit<DrawEllipseOptions, "radiusX" | "radiusY" | "rotation"> & { radius: number };
 
 export class EllipseTool extends BaseShapeTool {
     public draw(options: DrawEllipseOptions) {

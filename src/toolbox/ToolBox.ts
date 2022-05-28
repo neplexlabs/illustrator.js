@@ -9,6 +9,6 @@ export class ToolBox {
     public constructor(public readonly layer: Layer) {}
 
     public render() {
-        throw new Error("render() is not implemented by this tool");
+        throw new Error(`render() is not implemented by ${this.constructor.name}`);
     }
 }

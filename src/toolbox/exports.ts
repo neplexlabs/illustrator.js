@@ -7,3 +7,4 @@ export * from "./Shadow";
 export * from "./ConvolutionFilter";
 export * from "./shapes/BaseShapeTool";
 export * from "./shapes/Ellipse";
+export * from "./Transform";
