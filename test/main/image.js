@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 const fs = require("fs");
-const { Illustrator, Layer, Tools } = require("../dist/index");
+const { Illustrator, Layer, Tools } = require("../../dist/index");
 
 const illustrator = new Illustrator(512, 512);
 illustrator.backgroundLayer.unlock();

@@ -1,4 +1,4 @@
-import { Illustrator, Layer, Tools } from "../dist/index.mjs";
+import { Illustrator, Layer, Tools } from "../../dist/index.mjs";
 import fs from "fs/promises";
 
 const illustrator = new Illustrator(512, 512);
@@ -55,4 +55,4 @@ const output = await illustrator.export({
     encoding: "png"
 });
 
-await fs.writeFile("./test/demo.png", output);
+await fs.writeFile("./test/ellipse/demo.png", output);
