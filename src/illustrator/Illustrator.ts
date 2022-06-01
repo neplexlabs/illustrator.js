@@ -44,6 +44,8 @@ export class Illustrator {
         const layers = this.layers.getAllLayers(true);
 
         for (const layerConfig of layers) {
+            // skip background layer
+            if (layerConfig.name === "background") continue;
             // don't render if the layer is hidden
             if (layerConfig.layer.hidden) continue;
             // eslint-disable-next-line

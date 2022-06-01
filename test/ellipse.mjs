@@ -1,4 +1,4 @@
-import { Illustrator, Layer, Tools } from "../../dist/index.mjs";
+import { ColorUtil, Illustrator, Tools } from "../dist/index.mjs";
 import fs from "fs/promises";
 
 const illustrator = new Illustrator(512, 512);
@@ -8,16 +8,18 @@ layer.unlock();
 // background
 const bgTool = new Tools.BackgroundColorTool(layer);
 const gradient = layer.utils.createConicGradient(90, 0, 0);
-gradient.addColorStop(0, "#000000");
-gradient.addColorStop(1, "#FFFFFF");
+gradient.addColorStop(0, ColorUtil.resolveHex("DC_RED"));
+gradient.addColorStop(1, ColorUtil.resolveHex("DC_GREEN"));
 bgTool.setFillColor(gradient);
 bgTool.fill(0, 0, illustrator.width, illustrator.height);
 bgTool.render();
 
-const layer2 = new Layer(illustrator);
+const layer2 = illustrator.layers.createLayer({
+    name: "ellipse"
+});
 const ellipse = new Tools.EllipseTool(layer2);
 
-ellipse.setFillColor("#FFFFFF");
+ellipse.setFillColor(ColorUtil.resolveHex("DC_WHITE"));
 ellipse.addPoint();
 ellipse.draw({
     x: 100,
@@ -31,7 +33,7 @@ ellipse.draw({
 ellipse.fill();
 ellipse.removePoint();
 
-ellipse.setStrokeColor("#FFFFFF");
+ellipse.setStrokeColor(ColorUtil.resolveHex("DC_WHITE"));
 ellipse.setLineWidth(12);
 ellipse.addPoint();
 ellipse.setLineDash([5, 5]);
@@ -49,10 +51,8 @@ ellipse.removePoint();
 
 ellipse.render();
 
-illustrator.addLayer(layer2, "layer-2");
-
 const output = await illustrator.export({
     encoding: "png"
 });
 
-await fs.writeFile("./test/ellipse/demo.png", output);
+await fs.writeFile("./test/demo.png", output);
