@@ -1,5 +1,6 @@
 import { AvifConfig, createCanvas } from "@napi-rs/canvas";
 import { Layer } from "./Layer";
+import { LayerManager } from "./LayerManager";
 
 export interface IllustratorExportConfig {
     encoding?: "png" | "avif" | "jpeg" | "webp";
@@ -8,84 +9,61 @@ export interface IllustratorExportConfig {
 }
 
 export class Illustrator {
-    #layers = new Map<string, Layer>();
+    public layers = new LayerManager(this);
 
     public constructor(public readonly width: number, public readonly height: number) {
-        this.#layers.set("background", new Layer(this).lock());
+        this.layers
+            .createLayer({
+                name: "background"
+            })
+            .lock();
     }
 
     public get backgroundLayer() {
-        return this.#layers.get("background") as Layer;
+        return this.layers.getLayer("background") as Layer;
     }
 
-    public addLayer(layer: Layer, name: string) {
-        if (!name || typeof name !== "string") throw new TypeError("layer name must be a string");
-        if (this.#layers.has(name)) throw new Error("layer with this name already exists");
-        this.#layers.set(name, layer);
-        return this;
-    }
-
-    public deleteLayer(name: string) {
-        if (!name || typeof name !== "string") throw new TypeError("layer name must be a string");
-        this.#layers.delete(name);
-        return this;
-    }
-
-    public hasLayer(name: string) {
-        if (!name || typeof name !== "string") throw new TypeError("layer name must be a string");
-        return this.#layers.has(name);
-    }
-
-    public getLayer(name: string) {
-        if (!name || typeof name !== "string") throw new TypeError("layer name must be a string");
-        return this.#layers.get(name);
-    }
-
-    public layersCount() {
-        return this.#layers.size;
-    }
-
-    public *layers() {
-        for (const layer of this.#layers) {
-            // skip background layer
-            if (layer[0] === "background") continue;
-            yield layer[1];
-        }
-    }
-
-    public render() {
+    public async render() {
         const canvas = createCanvas(this.width, this.height);
         const ctx = canvas.getContext("2d");
 
         // render background layer first
         // eslint-disable-next-line
-        const data = this.backgroundLayer.render()!;
+        const data = (await this.backgroundLayer.render())!;
         // draw rendered layer on main canvas
-        ctx.drawImage(
-            data,
-            this.backgroundLayer.coordinates.x,
-            this.backgroundLayer.coordinates.y,
-            this.backgroundLayer.width,
-            this.backgroundLayer.height
-        );
+        if (data != null)
+            ctx.drawImage(
+                data,
+                this.backgroundLayer.coordinates.x,
+                this.backgroundLayer.coordinates.y,
+                this.backgroundLayer.width,
+                this.backgroundLayer.height
+            );
 
         // render from top to bottom
-        const layers = Array.from(this.layers()).reverse();
+        const layers = this.layers.getAllLayers(true);
 
-        for (const layer of layers) {
+        for (const layerConfig of layers) {
             // don't render if the layer is hidden
-            if (layer.hidden) continue;
+            if (layerConfig.layer.hidden) continue;
             // eslint-disable-next-line
-            const data = layer.render()!;
+            const data = (await layerConfig.layer.render())!;
+            if (data == null) continue;
             // draw rendered layer on main canvas
-            ctx.drawImage(data, layer.coordinates.x, layer.coordinates.y, layer.width, layer.height);
+            ctx.drawImage(
+                data,
+                layerConfig.layer.coordinates.x,
+                layerConfig.layer.coordinates.y,
+                layerConfig.layer.width,
+                layerConfig.layer.height
+            );
         }
 
         return { canvas, ctx };
     }
 
-    public export(config: IllustratorExportConfig = {}) {
-        const output = this.render();
+    public async export(config: IllustratorExportConfig = {}) {
+        const output = await this.render();
 
         if (config.encoding == null || config.encoding === "png") {
             return output.canvas.encode("png");
