@@ -8,4 +8,4 @@ LABEL com.github.actions.color="red"
 RUN apt-get update && apt-get install -y git
 
 COPY src /actions/docs/src
-ENTRYPOINT ["/actions/docs/src/docs.sh"]
+ENTRYPOINT ["/actions/docs/src/entrypoint.sh"]
