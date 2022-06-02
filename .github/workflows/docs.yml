@@ -24,4 +24,4 @@ jobs:
       - name: 📃 Run Docs Generator
         uses: ./.github/actions/docs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CESIUM_BOT_TOKEN }}
