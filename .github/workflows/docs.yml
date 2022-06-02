@@ -22,23 +22,6 @@ jobs:
         run: yarn install --immutable --immutable-cache --check-cache
 
       - name: 📃 Run Docs Generator
-        run: yarn run docs
-
-      - name: 🦘 Clone git repo
-        run: |
-          git clone https://github.com/CesiumLabs/illustrator.js.git out
-          cd out
-          git checkout docs
-          mv ../docs/docs.json ${{ github.ref }}.json
-
-      - name: ✅ Git commit changes
-        run: |
-          git config --local user.email "103743930+CesiumLabsBot@users.noreply.github.com"
-          git config --local user.name "CesiumLabsBot"
-          git add .
-          git commit -m "🚀 Build documentation"
-      - name: 🚀 Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.CESIUM_BOT_TOKEN }}
-          branch: docs
+        uses: ./.github/actions/docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.CESIUM_BOT_TOKEN }}
