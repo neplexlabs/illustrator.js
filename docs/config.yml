@@ -1,0 +1,5 @@
+- name: Home
+  files:
+    - name: General
+      id: general
+      path: ../../README.md
