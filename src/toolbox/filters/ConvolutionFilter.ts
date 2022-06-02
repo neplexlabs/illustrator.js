@@ -1,11 +1,11 @@
 import { SKRSContext2D } from "@napi-rs/canvas";
-import { ToolBox } from "./ToolBox";
+import { ToolBox } from "../base/ToolBox";
 
 export interface ConvolutionOptions {
     sx?: number;
     sy?: number;
     opaque?: boolean;
-    readonly matrix: Array<number>;
+    matrix: Array<number>;
     iterations?: number;
 }
 
@@ -89,11 +89,11 @@ export class ConvolutionTool extends ToolBox {
 
     public get matrices() {
         return {
-            Identify: [0, 0, 0, 0, 1, 0, 0, 0, 0] as const,
-            Ridge: [-1, -1, -1 - 1, 8, -1, -1, -1, -1] as const,
-            Sharpen: [0, -1, 0, -1, 5, -1, 0, -1, 0] as const,
-            Blur: [1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9] as const,
-            Edge: [0, -1, 0, -1, 4, -1, 0, -1, 0] as const
+            Identify: [0, 0, 0, 0, 1, 0, 0, 0, 0],
+            Ridge: [-1, -1, -1 - 1, 8, -1, -1, -1, -1],
+            Sharpen: [0, -1, 0, -1, 5, -1, 0, -1, 0],
+            Blur: [1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9],
+            Edge: [0, -1, 0, -1, 4, -1, 0, -1, 0]
         };
     }
 

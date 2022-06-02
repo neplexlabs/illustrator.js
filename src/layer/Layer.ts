@@ -1,5 +1,5 @@
 import { Canvas, createCanvas, SKRSContext2D } from "@napi-rs/canvas";
-import { ToolBox } from "../toolbox/ToolBox";
+import { ToolBox } from "../toolbox/base/ToolBox";
 import { LayerManager } from "./LayerManager";
 import { LayerUtils } from "./LayerUtils";
 

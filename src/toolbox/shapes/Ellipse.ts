@@ -1,4 +1,4 @@
-import { BaseShapeTool } from "./BaseShapeTool";
+import { BaseShapeTool } from "../base/BaseShapeTool";
 
 export interface DrawEllipseOptions {
     x: number;

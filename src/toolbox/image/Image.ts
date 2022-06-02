@@ -1,5 +1,5 @@
 import { Canvas, Image } from "@napi-rs/canvas";
-import { ToolBox } from "./ToolBox";
+import { ToolBox } from "../base/ToolBox";
 import * as fs from "node:fs";
 
 export class ImageTool extends ToolBox {

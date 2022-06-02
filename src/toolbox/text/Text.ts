@@ -1,6 +1,6 @@
-import { ToolBox } from "./ToolBox";
+import { ToolBox } from "../base/ToolBox";
 import { GlobalFonts } from "@napi-rs/canvas";
-import { makeArgs } from "../utils/makeArgs";
+import { makeArgs } from "../../utils/makeArgs";
 
 export class TextTool extends ToolBox {
     public registerFont(font: Buffer, nameAlias?: string) {

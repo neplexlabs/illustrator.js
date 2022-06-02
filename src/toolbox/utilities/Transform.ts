@@ -1,4 +1,4 @@
-import { ToolBox } from "./ToolBox";
+import { ToolBox } from "../base/ToolBox";
 
 export interface TransformOptions {
     horizontalScaling?: number;

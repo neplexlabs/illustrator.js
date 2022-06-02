@@ -1,4 +1,4 @@
-import { ToolBox } from "./ToolBox";
+import { ToolBox } from "../base/ToolBox";
 
 export class BackgroundColorTool extends ToolBox {
     public setFillColor(color: string | CanvasPattern | CanvasGradient) {

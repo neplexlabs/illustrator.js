@@ -1,6 +1,6 @@
 import { Path2D } from "@napi-rs/canvas";
 import { makeArgs } from "../../utils/makeArgs";
-import { ToolBox } from "../ToolBox";
+import { ToolBox } from "./ToolBox";
 
 export class BaseShapeTool extends ToolBox {
     public setFillColor(color: string | CanvasGradient | CanvasPattern) {
