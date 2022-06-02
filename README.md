@@ -44,7 +44,7 @@ for (const color of colors) {
 const animation = illustrator.animation;
 // get all layers and transform to animation frame
 const layers = illustrator.layers.getAllLayers().map(m => ({
-    duration: 100,
+    duration: 500,
     frame: m.layer
 }));
 // animation config, set repeat to infinite (or 0) and add our layers to frames
