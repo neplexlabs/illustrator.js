@@ -1,3 +1,3 @@
 export function generateRandomId() {
-    return Date.now();
+    return Math.random();
 }

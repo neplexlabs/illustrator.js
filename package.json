@@ -68,6 +68,7 @@
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.21",
+    "@skyra/gifenc": "^1.0.0",
     "tslib": "^2.4.0"
   }
 }

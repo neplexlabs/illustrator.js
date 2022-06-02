@@ -1,6 +1,6 @@
 import { IllustratorCollection } from "../utils/IllustratorCollection";
 import { generateRandomId } from "../utils/randomId";
-import { Illustrator } from "./Illustrator";
+import { Illustrator } from "../illustrator/Illustrator";
 import { Layer, LayerToolHistory } from "./Layer";
 
 export interface CreateLayerOptions {

@@ -1,6 +1,7 @@
 import { AvifConfig, createCanvas } from "@napi-rs/canvas";
-import { Layer } from "./Layer";
-import { LayerManager } from "./LayerManager";
+import { IllustratorAnimation } from "../animation/IllustratorAnimation";
+import { Layer } from "../layer/Layer";
+import { LayerManager } from "../layer/LayerManager";
 
 export interface IllustratorExportConfig {
     encoding?: "png" | "avif" | "jpeg" | "webp";
@@ -10,6 +11,7 @@ export interface IllustratorExportConfig {
 
 export class Illustrator {
     public layers = new LayerManager(this);
+    public animation = new IllustratorAnimation(this);
 
     public constructor(public readonly width: number, public readonly height: number) {
         this.layers
