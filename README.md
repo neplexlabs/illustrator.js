@@ -57,4 +57,4 @@ output.pipe(fs.createWriteStream("./animation.gif"));
 ```
 
 #### Preview Output
-![animation-preview](https://github.com/CesiumLabs/illustrator.js/tree/main/examples/gif/animation.gif)
+![animation-preview](https://raw.githubusercontent.com/CesiumLabs/illustrator.js/main/examples/gif/animation.gif)
