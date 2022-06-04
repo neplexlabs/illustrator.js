@@ -17,6 +17,7 @@
     "postdocs": "node scripts/docgen.js",
     "docs": "typedoc --json docs/typedoc.json src/index.ts",
     "format": "prettier --write {src,scripts,test}/**/*.{js,ts}",
+    "exportgen": "node scripts/exportgen.js",
     "lint": "eslint --fix",
     "prepare": "husky install"
   },
