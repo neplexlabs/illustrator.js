@@ -9,7 +9,7 @@ to be followed while contributing to this project.
 - Make sure to format the code before the deployment (run `yarn format` to do the magic)
 
 ### File names
-- Make sure to use `PascalCase` for the files containing a class (Eg: `Queue`, `Player` etc.)
+- Make sure to use `PascalCase` for the files containing a class (Eg: `Illustrator`, `LayerManager` etc.)
 - Use `lowercase`/`camelCase` for other files.
 
 ### Rules
