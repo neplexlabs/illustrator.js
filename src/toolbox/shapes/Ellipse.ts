@@ -15,7 +15,7 @@ export type DrawCircleOptions = Omit<DrawEllipseOptions, "radiusX" | "radiusY" |
 
 export class EllipseTool extends BaseShapeTool {
     public draw(options: DrawEllipseOptions) {
-        return this.history.push((ctx) => {
+        this.history.push((ctx) => {
             options.counterclockwise ??= false;
             ctx.ellipse(
                 options.x,
@@ -28,10 +28,12 @@ export class EllipseTool extends BaseShapeTool {
                 options.counterclockwise
             );
         });
+
+        return this;
     }
 
     public drawCircle(options: DrawCircleOptions) {
-        return this.history.push((ctx) => {
+        this.history.push((ctx) => {
             options.counterclockwise ??= false;
             ctx.arc(
                 options.x,
@@ -42,5 +44,7 @@ export class EllipseTool extends BaseShapeTool {
                 options.counterclockwise
             );
         });
+
+        return this;
     }
 }

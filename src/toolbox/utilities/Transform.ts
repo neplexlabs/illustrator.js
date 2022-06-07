@@ -83,6 +83,14 @@ export class TransformTool extends ToolBox {
         return this;
     }
 
+    public scale(x: number, y: number) {
+        this.history.push((ctx) => {
+            ctx.scale(x, y);
+        });
+
+        return this;
+    }
+
     public render() {
         this.layer.applyTool(this);
     }

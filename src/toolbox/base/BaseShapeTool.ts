@@ -27,6 +27,14 @@ export class BaseShapeTool extends ToolBox {
         return this;
     }
 
+    public setLineCap(lineCapStyle: CanvasLineCap) {
+        this.history.push((ctx) => {
+            ctx.lineCap = lineCapStyle;
+        });
+
+        return this;
+    }
+
     public setDashOffset(offset: number) {
         this.history.push((ctx) => {
             ctx.lineDashOffset = offset;

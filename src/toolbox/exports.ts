@@ -9,3 +9,6 @@ export * from "./filters/Sharpen";
 export * from "./filters/ConvolutionFilter";
 export * from "./shapes/Ellipse";
 export * from "./utilities/Transform";
+export * from "./shapes/Line";
+export * from "./shapes/Rectangle";
+export * from "./utilities/Eraser";

@@ -18,3 +18,6 @@ export * from "./toolbox/filters/Sharpen";
 export * from "./toolbox/filters/ConvolutionFilter";
 export * from "./toolbox/shapes/Ellipse";
 export * from "./toolbox/utilities/Transform";
+export * from "./toolbox/shapes/Line";
+export * from "./toolbox/shapes/Rectangle";
+export * from "./toolbox/utilities/Eraser";
