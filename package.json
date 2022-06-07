@@ -1,6 +1,6 @@
 {
   "name": "illustrator.js",
-  "version": "0.1.0-dev.1",
+  "version": "0.1.0-dev.2",
   "description": "JavaScript image processing library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

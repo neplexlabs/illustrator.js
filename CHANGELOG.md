@@ -1,4 +1,4 @@
-# 0.1.0-dev.1 (2022-06-02)
+# 0.1.0-dev.2 (2022-06-07)
 
 
 ### Bug Fixes
@@ -20,6 +20,7 @@
 * **Illustrator:** add animation api ([0074071](https://github.com/CesiumLabs/illustrator/commit/0074071dc4d7265caefab5e94db27460280c8a65))
 * initialize project base ([71e80d0](https://github.com/CesiumLabs/illustrator/commit/71e80d0a9dc4c20c45f4e2c2b09d9a8a6e9a77ee))
 * **shapes:** ellipse tool ([afd8532](https://github.com/CesiumLabs/illustrator/commit/afd85326862128dcfe4c8fc2afdb78156506d765))
+* **toolbox:** add more tools ([c1a2b88](https://github.com/CesiumLabs/illustrator/commit/c1a2b8879eec74bd7e57c9f7bcff8165ffe5a7b1))
 * **toolbox:** add sharpen tool ([4132053](https://github.com/CesiumLabs/illustrator/commit/413205398ef95da147db1999d5a1e0aaa2c3c857))
 * **toolbox:** add transform tool ([e0dc795](https://github.com/CesiumLabs/illustrator/commit/e0dc795ef00d3eebd40c37f1446b2dd1c3265844))
 * **ToolBox:** shape utilities ([65526ea](https://github.com/CesiumLabs/illustrator/commit/65526ea228b4b09c31868bd7101f7eace709dffd))
