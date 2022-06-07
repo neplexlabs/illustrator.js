@@ -5,6 +5,7 @@ export * from "./layer/LayerUtils";
 export * from "./utils/IllustratorCollection";
 export * from "./layer/Layer";
 export * from "./utils/ColorUtil";
+export * as Tools from "./toolbox/exports";
 
 // export tools individually due to docgen issue
 export * from "./toolbox/image/Image";
