@@ -9,7 +9,20 @@ $ npm install illustrator.js
 $ yarn add illustrator.js
 ```
 
-# Examples
+# Features
+
+* Illustrator is fast, powered by **[@napi-rs/canvas](https://github.com/Brooooooklyn/canvas)** 🚀
+* Illustrator provides beginner friendly API 🤓
+* TypeScript supported 💪
+* Layers API 🎚️
+* Color utilities API 🎨
+* Filters 📸
+* Tools such as eraser, shapes, text, etc. ⚒️
+* Animation API (GIF) 😎
+
+and more...
+
+# Quick Example
 
 ## Creating GIF
 
@@ -57,4 +70,14 @@ output.pipe(fs.createWriteStream("./animation.gif"));
 ```
 
 #### Preview Output
-![animation-preview](https://raw.githubusercontent.com/CesiumLabs/illustrator.js/main/examples/gif/animation.gif)
+
+<img src="https://raw.githubusercontent.com/CesiumLabs/illustrator.js/main/examples/gif/animation.gif" alt="gif-example" height="128" width="128" />
+
+## Other Examples
+
+Check out **[~/examples](https://github.com/CesiumLabs/illustrator.js/tree/main/examples)** for more.
+
+# Canvacord
+
+This library acts as Image Processor. It may be hard to get simple things done via this library.
+Check out **[Canvacord](https://github.com/CesiumLabs/canvacord)** for beginner-friendly utility APIs, built with **Illustrator.js**.
