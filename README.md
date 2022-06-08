@@ -81,3 +81,7 @@ Check out **[~/examples](https://github.com/CesiumLabs/illustrator.js/tree/main/
 
 This library acts as Image Processor. It may be hard to get simple things done via this library.
 Check out **[Canvacord](https://github.com/CesiumLabs/canvacord)** for beginner-friendly utility APIs, built with **Illustrator.js**.
+
+# Help us keep this project alive
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G05KFHP)
