@@ -15,7 +15,7 @@ export class EraserTool extends ToolBox {
         return this;
     }
 
-    public circular(options: EraserOptions & { radius?: number }) {
+    public circular(options: Omit<EraserOptions, "width" | "height"> & { radius?: number }) {
         this.history.push((ctx) => {
             ctx.beginPath();
             ctx.arc(options.x, options.y, options.radius ?? 50, 0, 2 * Math.PI);
