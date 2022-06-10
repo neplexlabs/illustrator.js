@@ -25,6 +25,7 @@ cd out
 git add .
 git config user.name "CesiumLabsBot"
 git config user.email "103743930+CesiumLabsBot@users.noreply.github.com"
+git config user.password $GITHUB_TOKEN
 git commit -m "🚀 Build docs for ${SOURCE_TYPE} ${CURRENT_BRANCH}: ${GITHUB_SHA}" || true
 git push origin $TARGET_BRANCH
 
