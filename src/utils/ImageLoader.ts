@@ -4,7 +4,15 @@ import * as http from "http";
 import * as https from "https";
 import { Readable } from "stream";
 
-export type IllustratorImageSource = string | URL | Buffer | Image | Canvas | ArrayBuffer | SharedArrayBuffer;
+export type IllustratorImageSource =
+    | string
+    | URL
+    | Buffer
+    | Image
+    | Canvas
+    | ArrayBuffer
+    | SharedArrayBuffer
+    | Uint8Array;
 
 function createImage(source: Buffer) {
     const image = new Image();
@@ -59,7 +67,8 @@ function httpReq(link: string | URL): Promise<Buffer> {
 export async function loadImage(source: IllustratorImageSource) {
     if (source instanceof Readable) return createImage(await consumeStream(source));
     if (Buffer.isBuffer(source)) return createImage(source);
-    if (source instanceof ArrayBuffer || source instanceof SharedArrayBuffer) return createImage(Buffer.from(source));
+    if (source instanceof ArrayBuffer || source instanceof SharedArrayBuffer || source instanceof Uint8Array)
+        return createImage(Buffer.from(source));
     if (source instanceof Image) return createImage(source.src);
     if (source instanceof Canvas) return createImage(await source.encode("png"));
     if ((typeof source === "string" || source instanceof URL) && fs.existsSync(source)) {
