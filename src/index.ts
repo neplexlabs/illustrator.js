@@ -9,6 +9,7 @@ export * as Tools from "./toolbox/exports";
 export * from "./colors/ColorSwatches";
 export * from "./colors/Colors";
 export * from "./colors/IllustratorColor";
+export * from "./utils/ImageLoader";
 
 // export tools individually due to docgen issue
 export * from "./toolbox/image/Image";
