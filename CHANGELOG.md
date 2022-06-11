@@ -1,4 +1,4 @@
-# 0.1.0-dev.3 (2022-06-07)
+# 0.1.0-dev.4 (2022-06-11)
 
 
 ### Bug Fixes
@@ -14,11 +14,15 @@
 
 * add base api methods ([9b3316b](https://github.com/CesiumLabs/illustrator/commit/9b3316b327353bd01d46b2dd4fb1a5e83ca7dd3b))
 * add layer manager and color utilities ([783dd58](https://github.com/CesiumLabs/illustrator/commit/783dd588bcc36807651df6b68769e9685793b60c))
+* add loadImage utility ([c24ef1d](https://github.com/CesiumLabs/illustrator/commit/c24ef1d6067a8e1a115dae5e1cb7de9457f495a8))
+* **colors:** add color api base ([7cd61f7](https://github.com/CesiumLabs/illustrator/commit/7cd61f714fef7d63f46a76941a0f75287bd6d35f))
 * **ConvolutionFilter:** export matrices ([de626b5](https://github.com/CesiumLabs/illustrator/commit/de626b5b4ba3a8a2d84151b918ded286bd0db6a7))
 * **Convolution:** implement convolution filter ([a7584e9](https://github.com/CesiumLabs/illustrator/commit/a7584e92509b5a6840ece734560eee7016437846))
 * **Ellipse:** add circle method ([5af4c28](https://github.com/CesiumLabs/illustrator/commit/5af4c28cc69ee65f87c266d7d776a645bd36adda))
 * **Illustrator:** add animation api ([0074071](https://github.com/CesiumLabs/illustrator/commit/0074071dc4d7265caefab5e94db27460280c8a65))
+* **ImageLoader:** add Uint8Array source type ([2a11331](https://github.com/CesiumLabs/illustrator/commit/2a11331764c486ef7299332a6713aff76213a00a))
 * initialize project base ([71e80d0](https://github.com/CesiumLabs/illustrator/commit/71e80d0a9dc4c20c45f4e2c2b09d9a8a6e9a77ee))
+* **Rectangle:** add drawRounded method ([#21](https://github.com/CesiumLabs/illustrator/issues/21)) ([896a98b](https://github.com/CesiumLabs/illustrator/commit/896a98b0ded928c22447f2c0d0d4c5d8b0b677d5))
 * **shapes:** ellipse tool ([afd8532](https://github.com/CesiumLabs/illustrator/commit/afd85326862128dcfe4c8fc2afdb78156506d765))
 * **toolbox:** add more tools ([c1a2b88](https://github.com/CesiumLabs/illustrator/commit/c1a2b8879eec74bd7e57c9f7bcff8165ffe5a7b1))
 * **toolbox:** add sharpen tool ([4132053](https://github.com/CesiumLabs/illustrator/commit/413205398ef95da147db1999d5a1e0aaa2c3c857))
