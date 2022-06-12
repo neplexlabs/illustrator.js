@@ -3,6 +3,9 @@ import * as fs from "fs";
 import * as http from "http";
 import * as https from "https";
 import { Readable } from "stream";
+import { Illustrator } from "../illustrator/Illustrator";
+import { IllustratorImage } from "../image/IllustratorImage";
+import { Layer } from "../layer/Layer";
 
 export type IllustratorImageSource =
     | string
@@ -12,7 +15,10 @@ export type IllustratorImageSource =
     | Canvas
     | ArrayBuffer
     | SharedArrayBuffer
-    | Uint8Array;
+    | Uint8Array
+    | Layer
+    | Illustrator
+    | IllustratorImage;
 
 function createImage(source: Buffer, bufferOnly = false) {
     if (bufferOnly) return source;
@@ -79,6 +85,10 @@ export class ImageLoader extends null {
             return createImage(Buffer.from(source), bufferOnly);
         if (source instanceof Image) return createImage(source.src, bufferOnly);
         if (source instanceof Canvas) return createImage(await source.encode("png"), bufferOnly);
+        if (source instanceof Layer)
+            return createImage(await ((await source.render()) as Canvas).encode("png"), bufferOnly);
+        if (source instanceof Illustrator) return createImage(await source.export(), bufferOnly);
+        if (source instanceof IllustratorImage) return createImage(await source.png(), bufferOnly);
         if ((typeof source === "string" || source instanceof URL) && fs.existsSync(source)) {
             const data = await fs.promises.readFile(source);
             return createImage(data, bufferOnly);

@@ -57,3 +57,5 @@ export class IllustratorImageManager {
         return pngQuantizeSync(src, options);
     }
 }
+
+export { JpegCompressOptions, PNGLosslessOptions, PngQuantOptions };
