@@ -1,4 +1,4 @@
-# 0.1.0-dev.4 (2022-06-11)
+# 0.1.0-dev.5 (2022-06-12)
 
 
 ### Bug Fixes
@@ -6,6 +6,7 @@
 * **ConvolutionFilter:** remove worker impl ([a1c559a](https://github.com/CesiumLabs/illustrator/commit/a1c559ab5e37e2705569cb302de2d25d6bcdfa5e))
 * **Illustrator:** skip background layer ([488fc9f](https://github.com/CesiumLabs/illustrator/commit/488fc9f7325f2a6c63f9e5d61faf21ece82f2ec7))
 * **Layer:** add tool instance check ([eefa81d](https://github.com/CesiumLabs/illustrator/commit/eefa81d88ff32235cc22c21557dbafd756b3876c))
+* **Layer:** expose context by default ([788adbd](https://github.com/CesiumLabs/illustrator/commit/788adbdce3e55c5a9a99f7f46cf99893e33fccb2))
 * move commitlint to pre-commit ([5a8065f](https://github.com/CesiumLabs/illustrator/commit/5a8065f9d9c6063bfa70e7c944f95b85f9bad345))
 * **Text:** text tool not rendering ([93a3269](https://github.com/CesiumLabs/illustrator/commit/93a326972e7d33d48426fd5bf03cc6d7527acfc7))
 
@@ -20,8 +21,11 @@
 * **Convolution:** implement convolution filter ([a7584e9](https://github.com/CesiumLabs/illustrator/commit/a7584e92509b5a6840ece734560eee7016437846))
 * **Ellipse:** add circle method ([5af4c28](https://github.com/CesiumLabs/illustrator/commit/5af4c28cc69ee65f87c266d7d776a645bd36adda))
 * **Illustrator:** add animation api ([0074071](https://github.com/CesiumLabs/illustrator/commit/0074071dc4d7265caefab5e94db27460280c8a65))
+* **Illustrator:** add image utilities api ([a209619](https://github.com/CesiumLabs/illustrator/commit/a209619802a094473c765bb598eda4d08fa9a21e))
+* **IllustratorImage:** add ImageData exports ([ab07a24](https://github.com/CesiumLabs/illustrator/commit/ab07a24465cb37edbdfc460e9eb554f2e5374997))
 * **ImageLoader:** add Uint8Array source type ([2a11331](https://github.com/CesiumLabs/illustrator/commit/2a11331764c486ef7299332a6713aff76213a00a))
 * initialize project base ([71e80d0](https://github.com/CesiumLabs/illustrator/commit/71e80d0a9dc4c20c45f4e2c2b09d9a8a6e9a77ee))
+* **LayerUtils:** add image data methods ([c8be6f1](https://github.com/CesiumLabs/illustrator/commit/c8be6f17a6bc7a5d843578f87d6d6d70e298d8c1))
 * **Rectangle:** add drawRounded method ([#21](https://github.com/CesiumLabs/illustrator/issues/21)) ([896a98b](https://github.com/CesiumLabs/illustrator/commit/896a98b0ded928c22447f2c0d0d4c5d8b0b677d5))
 * **shapes:** ellipse tool ([afd8532](https://github.com/CesiumLabs/illustrator/commit/afd85326862128dcfe4c8fc2afdb78156506d765))
 * **toolbox:** add more tools ([c1a2b88](https://github.com/CesiumLabs/illustrator/commit/c1a2b8879eec74bd7e57c9f7bcff8165ffe5a7b1))
