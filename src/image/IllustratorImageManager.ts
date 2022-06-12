@@ -1,5 +1,5 @@
 import { Illustrator } from "../illustrator/Illustrator";
-import { IllustratorImageSource, ImageLoader } from "../utils/ImageLoader";
+import { IllustratorImageSource, ImageLoader } from "./ImageLoader";
 import { IllustratorImage } from "./IllustratorImage";
 import {
     compressJpeg,

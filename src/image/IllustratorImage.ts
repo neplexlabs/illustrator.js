@@ -1,5 +1,5 @@
 import { Transformer } from "@napi-rs/image";
-import { ImageLoader } from "../utils/ImageLoader";
+import { ImageLoader } from "./ImageLoader";
 import { ImageData as SkImageData } from "@napi-rs/canvas";
 
 export interface RawImageData {

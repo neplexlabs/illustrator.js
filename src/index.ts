@@ -9,7 +9,7 @@ export * as Tools from "./toolbox/exports";
 export * from "./colors/ColorSwatches";
 export * from "./colors/Colors";
 export * from "./colors/IllustratorColor";
-export * from "./utils/ImageLoader";
+export * from "./image/ImageLoader";
 export * from "./image/IllustratorImage";
 export * from "./image/IllustratorImageManager";
 

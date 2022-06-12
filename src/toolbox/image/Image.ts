@@ -1,5 +1,5 @@
 import { Image } from "@napi-rs/canvas";
-import { ImageLoader, IllustratorImageSource } from "../../utils/ImageLoader";
+import { ImageLoader, IllustratorImageSource } from "../../image/ImageLoader";
 import { ToolBox } from "../base/ToolBox";
 
 export class ImageTool extends ToolBox {
