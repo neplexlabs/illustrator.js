@@ -34,7 +34,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CesiumLabs/illustrator.git"
+    "url": "git+https://github.com/CesiumLabs/illustrator.js.git"
   },
   "keywords": [
     "illustrator",
@@ -48,9 +48,9 @@
   "author": "DevAndromeda <contact@dhunganakunjan.com.np>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CesiumLabs/illustrator/issues"
+    "url": "https://github.com/CesiumLabs/illustrator.js/issues"
   },
-  "homepage": "https://github.com/CesiumLabs/illustrator#readme",
+  "homepage": "https://illustrator.js.org",
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-angular": "^17.0.0",
