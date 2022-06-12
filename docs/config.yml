@@ -3,3 +3,14 @@
     - name: Welcome
       id: welcome
       path: ../../README.md
+- name: Examples
+  files:
+    - name: Image Manipulation
+      id: image-manipulation
+      path: ../../examples/manipulation/example.mjs
+    - name: Creating GIF
+      id: gif-animation
+      path: ../../examples/gif/animation.mjs
+    - name: Triggered
+      id: triggered-animation
+      path: ../../examples/triggered/triggered.mjs
