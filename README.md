@@ -18,6 +18,7 @@ $ yarn add illustrator.js
 * Color utilities API 🎨
 * Filters 📸
 * Tools such as eraser, shapes, text, etc. ⚒️
+* Image manipulation (crop, brightness, blur, sharpness, format conversion, compression and much more..)
 * Animation API (GIF) 😎
 
 and more...
