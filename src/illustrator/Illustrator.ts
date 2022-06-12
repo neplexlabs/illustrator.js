@@ -15,7 +15,7 @@ export class Illustrator {
     public layers = new LayerManager(this);
     public animation = new IllustratorAnimation(this);
     public colors = new Colors(this);
-    public image = new IllustratorImageManager(this);
+    public image = new IllustratorImageManager();
 
     public constructor(public readonly width: number, public readonly height: number) {
         this.layers

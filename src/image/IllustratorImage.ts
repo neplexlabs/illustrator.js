@@ -1,6 +1,24 @@
-import { Transformer } from "@napi-rs/image";
+import {
+    Transformer,
+    Orientation,
+    AvifConfig,
+    ChromaSubsampling,
+    CompressionType,
+    JsColorType,
+    FilterType,
+    ResizeFilterType,
+    Metadata
+} from "@napi-rs/image";
 import { ImageLoader } from "./ImageLoader";
 import { ImageData as SkImageData } from "@napi-rs/canvas";
+
+export { AvifConfig, Metadata };
+
+// prettier-ignore
+export const IllustratorImageEnums = {
+    // @ts-expect-error
+    Orientation, ChromaSubsampling, CompressionType, JsColorType, FilterType, ResizeFilterType
+};
 
 export interface RawImageData {
     data: Uint8ClampedArray | Buffer;

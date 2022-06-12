@@ -1,4 +1,3 @@
-import { Illustrator } from "../illustrator/Illustrator";
 import { IllustratorImageSource, ImageLoader } from "./ImageLoader";
 import { IllustratorImage } from "./IllustratorImage";
 import {
@@ -14,8 +13,6 @@ import {
 } from "@napi-rs/image";
 
 export class IllustratorImageManager {
-    public constructor(public readonly illustrator: Illustrator) {}
-
     /**
      * Loads image source data
      * @param src The image source
