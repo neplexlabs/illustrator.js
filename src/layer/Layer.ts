@@ -27,7 +27,7 @@ export class Layer {
     };
     public width: number;
     public height: number;
-    #exposed = false;
+    #exposed = true;
 
     public constructor(
         public readonly manager: LayerManager,
