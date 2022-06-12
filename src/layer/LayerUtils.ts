@@ -1,4 +1,4 @@
-import { Image, SKRSContext2D } from "@napi-rs/canvas";
+import { ColorSpace, Image, ImageData, SKRSContext2D } from "@napi-rs/canvas";
 
 export class LayerUtils {
     #ctx: SKRSContext2D;
@@ -29,5 +29,13 @@ export class LayerUtils {
 
     public createPattern(image: Image | ImageData, repeat: "repeat" | "repeat-x" | "repeat-y" | "no-repeat" | null) {
         return this.#ctx.createPattern(image, repeat);
+    }
+
+    public getImageData(sx = 0, sy = 0, sw = this.#ctx.canvas.width, sh = this.#ctx.canvas.height) {
+        return this.#ctx.getImageData(sx, sy, sw, sh);
+    }
+
+    public putImageData(data: ImageData & { colorSpace: ColorSpace }, dx: number, dy: number) {
+        return this.#ctx.putImageData(data, dx, dy);
     }
 }
