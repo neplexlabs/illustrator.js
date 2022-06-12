@@ -268,6 +268,84 @@
     "@napi-rs/canvas-linux-x64-musl" "0.1.22"
     "@napi-rs/canvas-win32-x64-msvc" "0.1.22"
 
+"@napi-rs/image-android-arm-eabi@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-android-arm-eabi/-/image-android-arm-eabi-1.3.0.tgz#447913d8025b01cb4c7158e8ae2a79cbde15290b"
+  integrity sha512-cVWPU1y9xPunwZGlbMvNbhp6KIA5u/yrTNMJeEIVYNUNRqyheXepmRtsofn0HFEGgVDeVA2tTmg5KJCTw8iSSQ==
+
+"@napi-rs/image-android-arm64@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-android-arm64/-/image-android-arm64-1.3.0.tgz#64f5af7e4429b1d05cf0106a086941d7b7d60ee6"
+  integrity sha512-kQYOSOywE90LH2I1E1d3TMHAF84kdEU+xHfn3rIUcDYPFbeo7scfsLS/VQv6kBduc3Q67A3VmZPFZIcSWPt6bw==
+
+"@napi-rs/image-darwin-arm64@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-darwin-arm64/-/image-darwin-arm64-1.3.0.tgz#5e99cdea19d0db0dfb3c42263a58d278a27e6b04"
+  integrity sha512-hD8iF8yxqnCU6DcMcdr8K/mLU917jW6GABGVo2TPSw9SJb5JApiKPQTnglpCtGdu/fkJTiKJ2qVGXrJ7oG5GDA==
+
+"@napi-rs/image-darwin-x64@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-darwin-x64/-/image-darwin-x64-1.3.0.tgz#2667776d4ba5ccfb432940a68dded1fb2ba20dd5"
+  integrity sha512-fRH6AIjB0654YNALat+As7GFWSJX0UVhcv+9ADX4zgpWyclVtktQAT3CnNIjK/DVcP1zr+DMyBNIpD3/yvl5cw==
+
+"@napi-rs/image-freebsd-x64@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-freebsd-x64/-/image-freebsd-x64-1.3.0.tgz#947bd057d926fa634664f8d45424ba4d9be96dfe"
+  integrity sha512-2GNOZy7xqWOqnVWHiF8OPEI+cgnoz09mHCUzwapqRagoXxcJjeEL1ciYPAEwUb4d2dEwK+/DdfL5ZiN8yQ0LBw==
+
+"@napi-rs/image-linux-arm-gnueabihf@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-linux-arm-gnueabihf/-/image-linux-arm-gnueabihf-1.3.0.tgz#70fc4f6e6dfa78b4a8da2bc2556d9958678372ee"
+  integrity sha512-1Q+Ztf3A/fPUrbgnHWJU4q/m9iYEnh/cGff96qPNQPG/YqyWFIECvqaC6mIzhW/jBAZHBU/9BPz5IglLC/JWHw==
+
+"@napi-rs/image-linux-arm64-gnu@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-linux-arm64-gnu/-/image-linux-arm64-gnu-1.3.0.tgz#e30527290a7e6424705289efccc352fd45f77815"
+  integrity sha512-5N42L9M2IoxcfDID12yqXUFvYBPuPl8b+2/ktDO6eO/SAIh2AX05fJIGlYsxjmUmL0tK0tS7UiXpnaOKucYt+A==
+
+"@napi-rs/image-linux-arm64-musl@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-linux-arm64-musl/-/image-linux-arm64-musl-1.3.0.tgz#e83d6e02acd245ce48e1f49f3ce75228ee2dca8c"
+  integrity sha512-u0kCoot1pR9cPVnKOrMonIy2VAeQTneWSfnJCV6C3OP6+1XwqB3MTyxwyWjUoXDmUcQuyEyfwAOqFSMsw6ONrw==
+
+"@napi-rs/image-linux-x64-gnu@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-linux-x64-gnu/-/image-linux-x64-gnu-1.3.0.tgz#c612052788703b728c9a9df6c93a30b6dcf0a960"
+  integrity sha512-P48DL8ZZXmXrxYW9t5cH0ZK62KxtSgGjpAlJLo8yh8KuFNk9o5qAP5HqjoJPL58uKbhK4PeBP97fIjamtS5eWw==
+
+"@napi-rs/image-linux-x64-musl@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-linux-x64-musl/-/image-linux-x64-musl-1.3.0.tgz#e81589125d0daa2fc188b100ef87418b94fbe3f3"
+  integrity sha512-sGDtrhCRQqWEKgOoWAUAqOoTGyFUzNnNo2Bqsi9aIoVcwmg65lRBoDFg9LjX29a44HuqBIRC7MWeQ1LaMnUGBw==
+
+"@napi-rs/image-win32-ia32-msvc@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-win32-ia32-msvc/-/image-win32-ia32-msvc-1.3.0.tgz#067d3d24c5c2bac77a2c4d949ef5a9cbe48b715b"
+  integrity sha512-JauaEIs2TfK9p3VJzyNEvO/7Dk4pkcVQ0crowtqM74nydX3/EUm9Ou3X6RQwMu/VOO4c81/B0tg7ahjhjJaH7Q==
+
+"@napi-rs/image-win32-x64-msvc@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image-win32-x64-msvc/-/image-win32-x64-msvc-1.3.0.tgz#7fd41eebb9e6288d02e537d9cfd9f7d7262211a1"
+  integrity sha512-Npp9507lyJfxoQsFVey+xoZBwGOcVXn81gkNfE8D7IySiaVH5ZiX7/snXiwSDerXK6c62z8NRdK+6SXfj1kiYA==
+
+"@napi-rs/image@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@napi-rs/image/-/image-1.3.0.tgz#a457cd57b9ad0bccb27e965f409f627fe5139b9f"
+  integrity sha512-Ie+11kev2JoPJ0o5carlYwuGjR7SUVS5h+oIvPPjWFCaQFTwOUqqjlnJJyBBzmImQoZxQgzPFVIBSMZ8G+tC2w==
+  optionalDependencies:
+    "@napi-rs/image-android-arm-eabi" "1.3.0"
+    "@napi-rs/image-android-arm64" "1.3.0"
+    "@napi-rs/image-darwin-arm64" "1.3.0"
+    "@napi-rs/image-darwin-x64" "1.3.0"
+    "@napi-rs/image-freebsd-x64" "1.3.0"
+    "@napi-rs/image-linux-arm-gnueabihf" "1.3.0"
+    "@napi-rs/image-linux-arm64-gnu" "1.3.0"
+    "@napi-rs/image-linux-arm64-musl" "1.3.0"
+    "@napi-rs/image-linux-x64-gnu" "1.3.0"
+    "@napi-rs/image-linux-x64-musl" "1.3.0"
+    "@napi-rs/image-win32-ia32-msvc" "1.3.0"
+    "@napi-rs/image-win32-x64-msvc" "1.3.0"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"

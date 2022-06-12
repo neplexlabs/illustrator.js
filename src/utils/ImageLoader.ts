@@ -14,7 +14,8 @@ export type IllustratorImageSource =
     | SharedArrayBuffer
     | Uint8Array;
 
-function createImage(source: Buffer) {
+function createImage(source: Buffer, bufferOnly = false) {
+    if (bufferOnly) return source;
     const image = new Image();
     image.src = source;
     return image;
@@ -56,42 +57,58 @@ function httpReq(link: string | URL): Promise<Buffer> {
     return new Promise((resolve, reject) => makeRequest(link, 20, resolve, reject));
 }
 
-/**
- * Loads the given source into `Image` instance.
- * @param source The image source to load
- * @example import { loadImage } from "illustrator.js";
- *
- * const image = await loadImage("https://example.com/image.png");
- * console.log(image.width, image.height);
- */
-export async function loadImage(source: IllustratorImageSource) {
-    if (source instanceof Readable) return createImage(await consumeStream(source));
-    if (Buffer.isBuffer(source)) return createImage(source);
-    if (source instanceof ArrayBuffer || source instanceof SharedArrayBuffer || source instanceof Uint8Array)
-        return createImage(Buffer.from(source));
-    if (source instanceof Image) return createImage(source.src);
-    if (source instanceof Canvas) return createImage(await source.encode("png"));
-    if ((typeof source === "string" || source instanceof URL) && fs.existsSync(source)) {
-        const data = await fs.promises.readFile(source);
-        return createImage(data);
+export class ImageLoader extends null {
+    private constructor() {
+        /* no-op */
     }
 
-    if (typeof source === "string" || source instanceof URL) {
-        if (typeof fetch === "function") {
-            const ab = await fetch(source as unknown as RequestInfo, {
-                method: "GET",
-                redirect: "follow"
-            }).then((res) => {
-                if (!res.ok) throw new Error(`request for image source rejected with status code "${res.status}"`);
-                return res.arrayBuffer();
-            });
-
-            return createImage(Buffer.from(ab));
-        } else {
-            const res = await httpReq(source);
-            return createImage(res);
+    /**
+     * Loads the given source into `Image` instance.
+     * @param source The image source to load
+     * @example import { loadImage } from "illustrator.js";
+     *
+     * const image = await loadImage("https://example.com/image.png");
+     * console.log(image.width, image.height);
+     */
+    public static async loadImage(source: IllustratorImageSource, bufferOnly?: false): Promise<Image>;
+    public static async loadImage(source: IllustratorImageSource, bufferOnly?: true): Promise<Buffer>;
+    public static async loadImage(source: IllustratorImageSource, bufferOnly?: boolean): Promise<Image | Buffer> {
+        if (source instanceof Readable) return createImage(await consumeStream(source), bufferOnly);
+        if (Buffer.isBuffer(source)) return createImage(source, bufferOnly);
+        if (source instanceof ArrayBuffer || source instanceof SharedArrayBuffer || source instanceof Uint8Array)
+            return createImage(Buffer.from(source), bufferOnly);
+        if (source instanceof Image) return createImage(source.src, bufferOnly);
+        if (source instanceof Canvas) return createImage(await source.encode("png"), bufferOnly);
+        if ((typeof source === "string" || source instanceof URL) && fs.existsSync(source)) {
+            const data = await fs.promises.readFile(source);
+            return createImage(data, bufferOnly);
         }
+
+        if (typeof source === "string" || source instanceof URL) {
+            if (typeof fetch === "function") {
+                const ab = await fetch(source as unknown as RequestInfo, {
+                    method: "GET",
+                    redirect: "follow"
+                }).then((res) => {
+                    if (!res.ok) throw new Error(`request for image source rejected with status code "${res.status}"`);
+                    return res.arrayBuffer();
+                });
+
+                return createImage(Buffer.from(ab), bufferOnly);
+            } else {
+                const res = await httpReq(source);
+                return createImage(res, bufferOnly);
+            }
+        }
+
+        throw new TypeError("Unsupported source type");
     }
 
-    throw new TypeError("Unsupported source type");
+    /**
+     * Creates `Image` instance
+     * @param data The image source data
+     */
+    public static createImage(data: Buffer) {
+        return createImage(data, false) as Image;
+    }
 }

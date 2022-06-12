@@ -1,10 +1,10 @@
 import { Image } from "@napi-rs/canvas";
-import { loadImage, IllustratorImageSource } from "../../utils/ImageLoader";
+import { ImageLoader, IllustratorImageSource } from "../../utils/ImageLoader";
 import { ToolBox } from "../base/ToolBox";
 
 export class ImageTool extends ToolBox {
     public load(source: IllustratorImageSource) {
-        return loadImage(source);
+        return ImageLoader.loadImage(source);
     }
 
     public draw(image: Image, dx: number, dy: number, dw?: number, dh?: number) {

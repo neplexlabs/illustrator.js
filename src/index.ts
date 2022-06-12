@@ -10,6 +10,8 @@ export * from "./colors/ColorSwatches";
 export * from "./colors/Colors";
 export * from "./colors/IllustratorColor";
 export * from "./utils/ImageLoader";
+export * from "./image/IllustratorImage";
+export * from "./image/IllustratorImageManager";
 
 // export tools individually due to docgen issue
 export * from "./toolbox/image/Image";
