@@ -19,8 +19,13 @@ const layer2 = illustrator.layers.createLayer({
 });
 const image = new Tools.ImageTool(layer2);
 const img = await image.load("https://cdn.discordapp.com/embed/avatars/0.png?size=2048");
-image.draw(img, 25, 25, 462, 462, 250);
+image.draw(img, 25, 25);
+image.draw(img, 25, 384, 100, 100);
+image.draw(img, 150, 384, 100, 100, true);
+image.drawRounded(img, 275, 384, 100, 100, 25);
 image.render();
+await illustrator.render();
+
 await illustrator.render();
 
 const output = await illustrator.export({
