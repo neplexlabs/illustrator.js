@@ -2,7 +2,7 @@
 
 JavaScript image processing library
 
-<img src="https://github.com/CesiumLabs/illustrator.js/tree/main/assets/logo.png" alt="illustrator.js" />
+<img src="https://raw.githubusercontent.com/CesiumLabs/illustrator.js/06de5d9cb50f8e4caf76fd20bb16cefc3fdef396/assets/logo.png" alt="illustrator.js" />
 
 # Installation
 
