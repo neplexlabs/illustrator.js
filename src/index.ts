@@ -12,6 +12,8 @@ export * from "./colors/IllustratorColor";
 export * from "./image/ImageLoader";
 export * from "./image/IllustratorImage";
 export * from "./image/IllustratorImageManager";
+export * as SkCanvas from "@napi-rs/canvas";
+export * as SkImage from "@napi-rs/image";
 
 // export tools individually due to docgen issue
 export * from "./toolbox/image/Image";

@@ -11,7 +11,8 @@ export class ImageTool extends ToolBox {
     public draw(image: Image, dx: number, dy: number, dw: number, dh: number): this;
     public draw(image: Image, dx: number, dy: number, dw: number, dh: number, circle: true): this;
     public draw(image: Image, dx: number, dy: number, dw?: number, dh?: number, circle?: boolean): this {
-        let args = arguments;
+        // eslint-disable-next-line prefer-rest-params
+        const args = arguments;
         this.history.push((ctx) => {
             ctx.save();
 
