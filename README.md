@@ -2,12 +2,18 @@
 
 JavaScript image processing library
 
+<img src="https://github.com/CesiumLabs/illustrator.js/tree/main/assets/logo.png" alt="illustrator.js" />
+
 # Installation
 
-```sh
+```powershell
+# install with npm
 $ npm install illustrator.js
+# install with yarn
 $ yarn add illustrator.js
 ```
+
+🎉 No build tools required!
 
 # Features
 
@@ -30,6 +36,9 @@ and more...
 # Quick Example
 
 ## Creating GIF
+
+<details>
+<summary>Show code</summary>
 
 ```js
 // import
@@ -74,9 +83,10 @@ const output = await animation.createAnimation();
 output.pipe(fs.createWriteStream("./animation.gif"));
 ```
 
-#### Preview Output
+#### Output Preview
 
 <img src="https://raw.githubusercontent.com/CesiumLabs/illustrator.js/main/examples/gif/animation.gif" alt="gif-example" height="128" width="128" />
+</details>
 
 ## Other Examples
 
@@ -84,8 +94,12 @@ Check out **[~/examples](https://github.com/CesiumLabs/illustrator.js/tree/main/
 
 # Canvacord
 
-This library acts as Image Processor. It may be hard to get simple things done via this library.
+It may be hard to get simple things done via this library.
 Check out **[Canvacord](https://github.com/CesiumLabs/canvacord)** for beginner-friendly utility APIs, built with **Illustrator.js**.
+
+# Discord
+
+Join our official Discord support server: **[Join Now](https://discord.gg/uqB8kxh)**
 
 # Help us keep this project alive
 
