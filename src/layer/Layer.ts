@@ -1,6 +1,7 @@
 import { Canvas, createCanvas, SKRSContext2D } from "@napi-rs/canvas";
 import { ToolBox } from "../toolbox/base/ToolBox";
 import { LayerManager } from "./LayerManager";
+import { LayerTools } from "./LayerTools";
 import { LayerUtils } from "./LayerUtils";
 
 export type LayerToolHistory = Array<(ctx: SKRSContext2D) => Promise<void> | void>[];
@@ -21,6 +22,7 @@ export class Layer {
     #hidden = false;
     #toolHistory: LayerToolHistory = [];
     public utils: LayerUtils;
+    public tools = new LayerTools(this);
     public coordinates = {
         x: 0,
         y: 0

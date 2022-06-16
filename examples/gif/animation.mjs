@@ -1,5 +1,5 @@
 // import
-import { Illustrator, Tools } from "../../dist/index.mjs";
+import { Illustrator } from "../../dist/index.mjs";
 // use this for prod
 // import { Illustrator, Tools } from "illustrator.js";
 import fs from "fs";
@@ -17,7 +17,7 @@ for (const color of colors) {
         name: color
     });
     // create background color tool
-    const bgTool = new Tools.BackgroundColorTool(layer);
+    const bgTool = new layer.tools.get("BackgroundColorTool");
     // set fill color
     bgTool.setFillColor(color);
     // fill background

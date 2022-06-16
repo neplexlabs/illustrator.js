@@ -1,5 +1,5 @@
 // import
-import { Illustrator, Tools } from "../../dist/index.mjs";
+import { Illustrator } from "../../dist/index.mjs";
 // use this for prod
 // import { Illustrator, Tools } from "illustrator.js";
 import fs from "fs";
@@ -14,8 +14,8 @@ illustrator.animation.setFrameDelay(15).setRepeat(0);
 
 for (let i = 0; i < 9; i++) {
     const layer = illustrator.layers.createLayer({ name: `Layer ${i}` });
-    const imgTool = new Tools.ImageTool(layer);
-    const bgTool = new Tools.BackgroundColorTool(layer);
+    const imgTool = layer.tools.get("ImageTool");
+    const bgTool = layer.tools.get("BackgroundColorTool");
     if (!img) img = await imgTool.load("https://cdn.discordapp.com/embed/avatars/0.png?size=4096");
     if (!base) base = await imgTool.load("./triggered-base.png");
 

@@ -46,7 +46,7 @@ and more...
 
 ```js
 // import
-import { Illustrator, Tools } from "illustrator.js";
+import { Illustrator } from "illustrator.js";
 import fs from "fs";
 
 // create illustrator instance
@@ -62,7 +62,7 @@ for (const color of colors) {
         name: color
     });
     // create background color tool
-    const bgTool = new Tools.BackgroundColorTool(layer);
+    const bgTool = layer.tools.get("BackgroundColorTool");
     // set fill color
     bgTool.setFillColor(color);
     // fill background

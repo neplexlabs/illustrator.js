@@ -12,6 +12,7 @@ export * from "./colors/IllustratorColor";
 export * from "./image/ImageLoader";
 export * from "./image/IllustratorImage";
 export * from "./image/IllustratorImageManager";
+export * from "./layer/LayerTools";
 export * as SkCanvas from "@napi-rs/canvas";
 export * as SkImage from "@napi-rs/image";
 
