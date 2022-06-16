@@ -1,4 +1,13 @@
-# 0.1.0 (2022-06-14)
+# [0.2.0](https://github.com/CesiumLabs/illustrator.js/compare/v0.1.0...v0.2.0) (2022-06-16)
+
+
+### Features
+
+* **LayerTools:** add layer tools utility ([0f8f753](https://github.com/CesiumLabs/illustrator.js/commit/0f8f753b01fa78a0573ef3fe9ee434aa4202093b))
+
+
+
+# [0.1.0](https://github.com/CesiumLabs/illustrator.js/compare/71e80d0a9dc4c20c45f4e2c2b09d9a8a6e9a77ee...v0.1.0) (2022-06-14)
 
 
 ### Bug Fixes
