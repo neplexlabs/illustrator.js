@@ -21,6 +21,7 @@ export class EraserTool extends ToolBox {
             ctx.arc(options.x, options.y, options.radius ?? 50, 0, 2 * Math.PI);
             ctx.clip();
             ctx.clearRect(0, 0, this.layer.width, this.layer.height);
+            ctx.closePath();
         });
         return this;
     }
