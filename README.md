@@ -101,6 +101,9 @@ Check out **[~/examples](https://github.com/DevAndromeda/illustrator.js/tree/mai
 It may be hard to get simple things done via this library.
 Check out **[Canvacord](https://github.com/CesiumLabs/canvacord)** for beginner-friendly utility APIs, built with **Illustrator.js**.
 
+# Special thanks to 💖
+[Brooooooklyn](https://github.com/Brooooooklyn) and the people behind [napi-rs](https://github.com/napi-rs). Illustrator.js is here only because of their hard work behind the projects under napi-rs.
+
 # Discord
 
 Join our official Discord support server: **[Join Now](https://discord.gg/uqB8kxh)**
