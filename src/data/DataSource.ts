@@ -17,6 +17,7 @@ export interface TextDataSource {
     };
 }
 
+// TODO: template api
 export interface ImageDataSource {
     value: IllustratorImageSource;
     config: {

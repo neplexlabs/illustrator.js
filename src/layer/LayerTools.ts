@@ -6,6 +6,10 @@ export class LayerTools {
     #toolsCache = new IllustratorCollection<string, Tools.ToolBox>();
     public constructor(public readonly layer: Layer) {}
 
+    public clearCache() {
+        this.#toolsCache.clear();
+    }
+
     public get<K extends keyof typeof Tools>(name: K) {
         if (typeof name !== "string" || !name)
             throw new TypeError(`tool name must be a string, received ${typeof name}`);
