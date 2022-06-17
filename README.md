@@ -1,5 +1,5 @@
 <div align="left">
-    <img src="https://raw.githubusercontent.com/CesiumLabs/illustrator.js/06de5d9cb50f8e4caf76fd20bb16cefc3fdef396/assets/logo.png" alt="illustrator.js" height="128" width="128" style="border-radius:7px;" align="right" />
+    <img src="https://raw.githubusercontent.com/DevAndromeda/illustrator.js/06de5d9cb50f8e4caf76fd20bb16cefc3fdef396/assets/logo.png" alt="illustrator.js" height="128" width="128" style="border-radius:7px;" align="right" />
     <div align="left">
          <h1>Illustrator.js</h1>
          <p>JavaScript image processing library</p>
@@ -89,12 +89,12 @@ output.pipe(fs.createWriteStream("./animation.gif"));
 
 #### Output Preview
 
-<img src="https://raw.githubusercontent.com/CesiumLabs/illustrator.js/main/examples/gif/animation.gif" alt="gif-example" height="128" width="128" />
+<img src="https://raw.githubusercontent.com/DevAndromeda/illustrator.js/main/examples/gif/animation.gif" alt="gif-example" height="128" width="128" />
 </details>
 
 ## Other Examples
 
-Check out **[~/examples](https://github.com/CesiumLabs/illustrator.js/tree/main/examples)** for more.
+Check out **[~/examples](https://github.com/DevAndromeda/illustrator.js/tree/main/examples)** for more.
 
 # Canvacord
 
