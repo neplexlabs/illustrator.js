@@ -10,9 +10,11 @@ import {
     Metadata
 } from "@napi-rs/image";
 import { ImageLoader } from "./ImageLoader";
-import { ImageData as SkImageData } from "@napi-rs/canvas";
+import { ImageData } from "@napi-rs/canvas";
 
 export { AvifConfig, Metadata };
+
+export type IllustratorImageData = ImageData & { colorSpace: PredefinedColorSpace };
 
 // prettier-ignore
 export const IllustratorImageEnums = {
@@ -45,19 +47,15 @@ export class IllustratorImage extends Transformer {
         return ImageLoader.createImage(png);
     }
 
-    public async toImageData(sw: number, sh?: number) {
-        const data = new Uint8ClampedArray(await this.rawPixels());
-        const imgData = new ImageData(data, sw, sh);
-        return imgData;
+    public static async fromImageData(data: ImageData | RawImageData) {
+        const transformer = super.fromRgbaPixels(data.data, data.width, data.height);
+        const iImage = new IllustratorImage(await transformer.rawPixels());
+        return iImage;
     }
 
-    public toImageDataSync(sw: number, sh?: number) {
-        const data = new Uint8ClampedArray(this.rawPixelsSync());
-        const imgData = new ImageData(data, sw, sh);
-        return imgData;
-    }
-
-    public static fromImageData(data: ImageData | SkImageData | RawImageData) {
-        return super.fromRgbaPixels(data.data, data.width, data.height);
+    public static fromImageDataSync(data: ImageData | RawImageData) {
+        const transformer = super.fromRgbaPixels(data.data, data.width, data.height);
+        const iImage = new IllustratorImage(transformer.rawPixelsSync());
+        return iImage;
     }
 }

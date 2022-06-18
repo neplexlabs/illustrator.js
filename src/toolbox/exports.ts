@@ -12,3 +12,4 @@ export * from "./transform/Transform";
 export * from "./shapes/Line";
 export * from "./shapes/Rectangle";
 export * from "./eraser/Eraser";
+export * from "./pixels/Pixels";

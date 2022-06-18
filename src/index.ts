@@ -31,3 +31,4 @@ export * from "./toolbox/transform/Transform";
 export * from "./toolbox/shapes/Line";
 export * from "./toolbox/shapes/Rectangle";
 export * from "./toolbox/eraser/Eraser";
+export * from "./toolbox/pixels/Pixels";

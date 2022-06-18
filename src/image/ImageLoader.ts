@@ -91,7 +91,7 @@ export class ImageLoader extends null {
         if (source instanceof Illustrator) return createImage(await source.export(), bufferOnly);
         if (source instanceof IllustratorImage) return createImage(await source.png(), bufferOnly);
         if (source instanceof ImageData) {
-            const img = IllustratorImage.fromImageData(source);
+            const img = await IllustratorImage.fromImageData(source);
             return createImage(await img.png(), bufferOnly);
         }
         if ((typeof source === "string" || source instanceof URL) && fs.existsSync(source)) {
