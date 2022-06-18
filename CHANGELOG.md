@@ -1,3 +1,12 @@
+## [0.3.2](https://github.com/DevAndromeda/illustrator.js/compare/v0.3.1...v0.3.2) (2022-06-18)
+
+
+### Bug Fixes
+
+* **utils:** fix makeArgs filter ([819a50c](https://github.com/DevAndromeda/illustrator.js/commit/819a50c86fc1c8b3ede781b51b9f91efeb487d16))
+
+
+
 ## [0.3.1](https://github.com/DevAndromeda/illustrator.js/compare/v0.3.0...v0.3.1) (2022-06-18)
 
 
