@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/DevAndromeda/illustrator.js/compare/v0.3.0...v0.3.1) (2022-06-18)
+
+
+### Bug Fixes
+
+* **TextTool:** flatten args ([8b4f10b](https://github.com/DevAndromeda/illustrator.js/commit/8b4f10b537777bac22fad0537b94e7f0081ec4b4))
+
+
+
 # [0.3.0](https://github.com/DevAndromeda/illustrator.js/compare/v0.2.0...v0.3.0) (2022-06-18)
 
 
