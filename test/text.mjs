@@ -10,9 +10,9 @@ layer.tools.get("BackgroundColorTool")
     .fill(0, 0, layer.width, layer.height)
     .render();
 const text = layer.tools.get("TextTool");
-text.setFont("PRIMETIME", 72);
+text.setFont("PRIMETIME", 190);
 text.setColor(ColorUtil.Colors.DC_WHITE);
-text.writeText("BLACKPINK", 40, 460, 700);
+text.writeText("BLACKPINK", 40, 460);
 text.render();
 
 const img = await illustrator.export();
