@@ -29,7 +29,6 @@ export class Layer {
     };
     public width: number;
     public height: number;
-    #exposed = true;
 
     public constructor(
         public readonly manager: LayerManager,
@@ -37,7 +36,6 @@ export class Layer {
         options?: {
             width?: number;
             height?: number;
-            exposeContext?: boolean;
         }
     ) {
         this.height = options?.height ?? this.manager.illustrator.height;
@@ -45,9 +43,6 @@ export class Layer {
         this.#canvas = createCanvas(this.width, this.height);
         this.#ctx = this.#canvas.getContext("2d");
         this.utils = new LayerUtils(this.#ctx);
-        if (options?.exposeContext) {
-            this.#exposed = true;
-        }
     }
 
     public get name() {
@@ -59,7 +54,7 @@ export class Layer {
     }
 
     public get context() {
-        return this.#exposed ? this.#ctx : null;
+        return this.#ctx;
     }
 
     public get position() {
@@ -124,7 +119,6 @@ export class Layer {
         return this.manager.duplicateLayer(this, this.#toolHistory, {
             name,
             config: {
-                exposeContext: this.#exposed,
                 height: this.height,
                 width: this.width
             },
