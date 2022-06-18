@@ -1,9 +1,17 @@
-# [0.2.0](https://github.com/DevAndromeda/illustrator.js/compare/v0.1.0...v0.2.0) (2022-06-16)
+# [0.3.0](https://github.com/DevAndromeda/illustrator.js/compare/v0.2.0...v0.3.0) (2022-06-18)
+
+
+### Bug Fixes
+
+* **Eraser:** close path ([7825830](https://github.com/DevAndromeda/illustrator.js/commit/7825830af847bef7a9c98d2c1e8a113ce27a0a6d))
 
 
 ### Features
 
+* **LayerTools:** add clearCache method ([2000cb7](https://github.com/DevAndromeda/illustrator.js/commit/2000cb7d644d9f95036acd4678f1936254e08f82))
 * **LayerTools:** add layer tools utility ([0f8f753](https://github.com/DevAndromeda/illustrator.js/commit/0f8f753b01fa78a0573ef3fe9ee434aa4202093b))
+* **PixelsTool:** add pixels utility base ([e42a539](https://github.com/DevAndromeda/illustrator.js/commit/e42a539a8a56335a454da4e46d9896b06600d8d3))
+* **PixelTool:** add manipulation methods ([5156a89](https://github.com/DevAndromeda/illustrator.js/commit/5156a89ed3224274654bbdd069d882c77e9477ba))
 
 
 
