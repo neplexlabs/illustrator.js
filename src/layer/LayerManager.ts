@@ -9,7 +9,6 @@ export interface CreateLayerOptions {
     config?: {
         height?: number;
         width?: number;
-        exposeContext?: boolean;
     };
 }
 

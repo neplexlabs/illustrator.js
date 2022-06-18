@@ -32,8 +32,4 @@ export class ShadowTool extends ToolBox {
 
         return this;
     }
-
-    public render() {
-        this.layer.applyTool(this);
-    }
 }

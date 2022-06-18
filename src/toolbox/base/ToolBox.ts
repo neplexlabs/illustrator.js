@@ -6,7 +6,7 @@ export type HistoryCallback = (ctx: SKRSContext2D) => Awaitable<void>;
 
 export class ToolBox {
     public history: HistoryCallback[] = [];
-    public constructor(public readonly layer: Layer) {}
+    public constructor(public readonly layer: Layer, public autoClear = false) {}
 
     public save() {
         this.history.push((ctx) => {
@@ -25,6 +25,7 @@ export class ToolBox {
     }
 
     public render() {
-        throw new Error(`render() is not implemented by ${this.constructor.name}`);
+        this.layer.applyTool(this);
+        if (this.autoClear) this.history = [];
     }
 }

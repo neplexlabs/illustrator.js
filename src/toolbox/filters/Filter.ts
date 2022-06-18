@@ -109,8 +109,4 @@ export class FilterTool extends ToolBox {
             }
         ]);
     }
-
-    public render() {
-        this.layer.applyTool(this);
-    }
 }

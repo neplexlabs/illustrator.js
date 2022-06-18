@@ -96,8 +96,4 @@ export class ConvolutionTool extends ToolBox {
             Edge: [0, -1, 0, -1, 4, -1, 0, -1, 0]
         };
     }
-
-    public render() {
-        this.layer.applyTool(this);
-    }
 }

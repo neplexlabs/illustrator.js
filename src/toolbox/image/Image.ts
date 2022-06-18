@@ -55,8 +55,4 @@ export class ImageTool extends ToolBox {
 
         return this;
     }
-
-    public render() {
-        this.layer.applyTool(this);
-    }
 }

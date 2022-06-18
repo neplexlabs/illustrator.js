@@ -25,8 +25,4 @@ export class EraserTool extends ToolBox {
         });
         return this;
     }
-
-    public render() {
-        this.layer.applyTool(this);
-    }
 }

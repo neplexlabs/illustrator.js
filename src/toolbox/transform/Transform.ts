@@ -90,8 +90,4 @@ export class TransformTool extends ToolBox {
 
         return this;
     }
-
-    public render() {
-        this.layer.applyTool(this);
-    }
 }

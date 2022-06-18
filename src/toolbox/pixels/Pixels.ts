@@ -131,10 +131,6 @@ export class PixelsTool extends ToolBox {
         });
     }
 
-    public render() {
-        this.layer.applyTool(this);
-    }
-
     public clearTransformer() {
         this.#transformer = null;
     }

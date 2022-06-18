@@ -126,8 +126,4 @@ export class BaseShapeTool extends ToolBox {
 
         return this;
     }
-
-    public render() {
-        this.layer.applyTool(this);
-    }
 }

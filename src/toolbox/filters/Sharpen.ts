@@ -11,8 +11,4 @@ export class SharpenTool extends ConvolutionTool {
 
         return this;
     }
-
-    public render() {
-        this.layer.applyTool(this);
-    }
 }
