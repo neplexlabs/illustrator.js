@@ -6,13 +6,22 @@ const layer = illustrator.backgroundLayer.unlock();
 
 // prettier-ignore
 layer.tools.get("BackgroundColorTool")
-    .setFillColor(ColorUtil.Colors.DC_DARK_BUT_NOT_BLACK)
+    .setFillColor("#EB459E")
     .fill(0, 0, layer.width, layer.height)
     .render();
+
+const shadow = layer.tools.get("ShadowTool");
+shadow.setColor("#000000");
+shadow.setBlur(8);
+shadow.setOffsetX(8);
+shadow.setOffsetY(-12);
+shadow.render();
+
 const text = layer.tools.get("TextTool");
-text.setFont("PRIMETIME", 190);
+text.setTextAlignment("center");
+text.setFont("PRIMETIME", 250);
 text.setColor(ColorUtil.Colors.DC_WHITE);
-text.writeText("BLACKPINK", 40, 460);
+text.writeText("BLACKPINK", illustrator.width / 2, illustrator.height / 2);
 text.render();
 
 const img = await illustrator.export();
