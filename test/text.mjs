@@ -17,11 +17,13 @@ shadow.setOffsetX(8);
 shadow.setOffsetY(-12);
 shadow.render();
 
+const offset = layer.utils.getCenterPoint(2);
 const text = layer.tools.get("TextTool");
 text.setTextAlignment("center");
-text.setFont("PRIMETIME", 250);
+text.setTextBaseline("middle");
+text.setFont("PRIMETIME", 280);
 text.setColor(ColorUtil.Colors.DC_WHITE);
-text.writeText("BLACKPINK", illustrator.width / 2, illustrator.height / 2);
+text.writeText("BLACKPINK", offset.x, offset.y);
 text.render();
 
 const img = await illustrator.export();

@@ -38,4 +38,13 @@ export class LayerUtils {
     public putImageData(data: ImageData & { colorSpace: ColorSpace }, dx: number, dy: number) {
         return this.#ctx.putImageData(data, dx, dy);
     }
+
+    public getCenterPoint(divider = 2) {
+        if (typeof divider !== "number") throw new TypeError("divider must be a number");
+
+        return {
+            x: this.#ctx.canvas.width / divider,
+            y: this.#ctx.canvas.height / divider
+        };
+    }
 }
