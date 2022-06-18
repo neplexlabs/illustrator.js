@@ -1,3 +1,13 @@
+## [0.3.3](https://github.com/DevAndromeda/illustrator.js/compare/v0.3.2...v0.3.3) (2022-06-18)
+
+
+### Features
+
+* add Layer and ToolBox utilities ([efbcb18](https://github.com/DevAndromeda/illustrator.js/commit/efbcb18d554568f44b740deb1e29f65aba3daea7))
+* **LayerUtils:** add getCenterPoint method ([1fec6bb](https://github.com/DevAndromeda/illustrator.js/commit/1fec6bbfe96b28cb9cf45d03a3bfbea8e0bc495a))
+
+
+
 ## [0.3.2](https://github.com/DevAndromeda/illustrator.js/compare/v0.3.1...v0.3.2) (2022-06-18)
 
 

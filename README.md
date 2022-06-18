@@ -37,6 +37,10 @@ and more...
 
 **[https://illustrator.js.org](https://illustrator.js.org)**
 
+# npm
+
+**[https://www.npmjs.com/package/illustrator.js](https://www.npmjs.com/package/illustrator.js)**
+
 # Quick Example
 
 ## Creating GIF
