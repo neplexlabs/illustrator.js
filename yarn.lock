@@ -219,55 +219,65 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@napi-rs/canvas-android-arm64@0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-android-arm64/-/canvas-android-arm64-0.1.22.tgz#db813219195d7be38480e9da99a8c0fb376e0788"
+"@napi-rs/canvas-android-arm64@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-android-arm64/-/canvas-android-arm64-0.1.23.tgz#b0f5d1429ddea7ec7fd52772b581701d3698726c"
+  integrity sha512-cKdJbyTSBjC2LN9lVBJswbCccbfwuh6f7lHYrLAPylmRbJg2jKbVi8iM+8hgsFX2DnE3fAv5dty2+ufgK9WGDA==
 
-"@napi-rs/canvas-darwin-arm64@0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-darwin-arm64/-/canvas-darwin-arm64-0.1.22.tgz#10dc9880045d15c1edb4f6426643de8f83f14d4f"
+"@napi-rs/canvas-darwin-arm64@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-darwin-arm64/-/canvas-darwin-arm64-0.1.23.tgz#c9c485a7391b1d9fde7ea2fae0fc38c8767c6096"
+  integrity sha512-OEOuFSTBU4zV+NwzJGZ6sXuOlwk2NnXMGRdUVNqsh48srk79AGSQA8JCkEkaVnquijohW3UpEGSUiA/TH/+GxA==
 
-"@napi-rs/canvas-darwin-x64@0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-darwin-x64/-/canvas-darwin-x64-0.1.22.tgz#a848b9376d2fde2622dd75a300e54d131fca91a3"
+"@napi-rs/canvas-darwin-x64@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-darwin-x64/-/canvas-darwin-x64-0.1.23.tgz#d8ec94bba58dad89a7e847b1baa1fcf70d8fea4c"
+  integrity sha512-BlQk3o/Rn4zhd0Tp1Dz4PAseCd3tR11ArM3z5eFnlAdYfqtwMCe+JH6Fdn+liN4Pkd9hxBpLPwCKjrWmlArP+A==
 
-"@napi-rs/canvas-linux-arm-gnueabihf@0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-arm-gnueabihf/-/canvas-linux-arm-gnueabihf-0.1.22.tgz#fec6cd543e009a0a70f7209f6c7adb9a25f6f606"
+"@napi-rs/canvas-linux-arm-gnueabihf@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-arm-gnueabihf/-/canvas-linux-arm-gnueabihf-0.1.23.tgz#e66d85a0545408dde0ccfa744487f812ba950ddb"
+  integrity sha512-Ne+Y+F8ecLEpuJQNHj22hJlwXiql1bvCjKPsQ3vWDetRhKAm1UdMIS3w6w8XploBPLwPIu0wywQkmmpyYKftag==
 
-"@napi-rs/canvas-linux-arm64-gnu@0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-arm64-gnu/-/canvas-linux-arm64-gnu-0.1.22.tgz#fe2eeaacf59f36cafbf7c7fc7d069de2fe3fdb62"
+"@napi-rs/canvas-linux-arm64-gnu@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-arm64-gnu/-/canvas-linux-arm64-gnu-0.1.23.tgz#1c6d4882639616a759bd413b92de580e2bd5bfd0"
+  integrity sha512-7b8QFc5xbzLeGqz59ssaQXZ70Im5gG2sdCQD6SUWMsI0+dz3FFrZ85pPSJj2O5vFSzh48jGVSKNSjMRtINzNKg==
 
-"@napi-rs/canvas-linux-arm64-musl@0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-arm64-musl/-/canvas-linux-arm64-musl-0.1.22.tgz#9e410316f1a2165fbdc11ff11a476ea658468de7"
+"@napi-rs/canvas-linux-arm64-musl@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-arm64-musl/-/canvas-linux-arm64-musl-0.1.23.tgz#dc629078c23c055f4cddc3bea6d6adb5e31dd286"
+  integrity sha512-njr/x76F95k6Xg858ykh0iFdboY1nHOpPzoD98o1028u7vYpcETHftiEZf+9dCSKswO2iK071Fus2aYhrM5LqQ==
 
-"@napi-rs/canvas-linux-x64-gnu@0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-x64-gnu/-/canvas-linux-x64-gnu-0.1.22.tgz#ebb67c639fe30986b0a86e8669959ad0849b5685"
+"@napi-rs/canvas-linux-x64-gnu@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-x64-gnu/-/canvas-linux-x64-gnu-0.1.23.tgz#0f067b2ab0b1ce296473f9ccc8dd13483227e701"
+  integrity sha512-oj8nuQz5YTiUOMGk1J5nuvQTMR62qOzYU8xoXOpqIPXHIhD/oz09W5C1fc7+kF7tIq+SmZ5ORH+m2cuijFMRmw==
 
-"@napi-rs/canvas-linux-x64-musl@0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-x64-musl/-/canvas-linux-x64-musl-0.1.22.tgz#e72a5467d6a8c1d72e9ae85c026e37966ba155bf"
+"@napi-rs/canvas-linux-x64-musl@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-linux-x64-musl/-/canvas-linux-x64-musl-0.1.23.tgz#a98ab0108952ba600b672c241d421146a9725879"
+  integrity sha512-PPJpirvpY8nTRvBrA+k8GCc5bh/Uz/JF9a18IMGbuYmYrIbf0OKYZw71JRUZp7gMMOzKa2shuNdXndIZOzf+ig==
 
-"@napi-rs/canvas-win32-x64-msvc@0.1.22":
-  version "0.1.22"
-  resolved "https://registry.npmjs.org/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-0.1.22.tgz"
+"@napi-rs/canvas-win32-x64-msvc@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-0.1.23.tgz#bd75bdc9cbc50e937c53979ba33e9846093c2bba"
+  integrity sha512-vd5Pkv4aSLOATtInoCQgqkyicMuOjN1fJnkYJz2Cgh9Mi4mGgCuVAbZ0p8bu7ixjL/twLzFVBr7G/4tZnqEWYQ==
 
 "@napi-rs/canvas@^0.1.21":
-  version "0.1.22"
-  resolved "https://registry.npmjs.org/@napi-rs/canvas/-/canvas-0.1.22.tgz"
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@napi-rs/canvas/-/canvas-0.1.23.tgz#00ddfa0777870b4def65d84cf6fc0a985dc8aa22"
+  integrity sha512-g4PpvGQQHOJBPzY7dTojEtkFyKRX5oigQYCYVr7Jf3yApmI1Zd+HBKPqOlqMr2PhOq5NijI36RS7MxeOd+z/Kg==
   optionalDependencies:
-    "@napi-rs/canvas-android-arm64" "0.1.22"
-    "@napi-rs/canvas-darwin-arm64" "0.1.22"
-    "@napi-rs/canvas-darwin-x64" "0.1.22"
-    "@napi-rs/canvas-linux-arm-gnueabihf" "0.1.22"
-    "@napi-rs/canvas-linux-arm64-gnu" "0.1.22"
-    "@napi-rs/canvas-linux-arm64-musl" "0.1.22"
-    "@napi-rs/canvas-linux-x64-gnu" "0.1.22"
-    "@napi-rs/canvas-linux-x64-musl" "0.1.22"
-    "@napi-rs/canvas-win32-x64-msvc" "0.1.22"
+    "@napi-rs/canvas-android-arm64" "0.1.23"
+    "@napi-rs/canvas-darwin-arm64" "0.1.23"
+    "@napi-rs/canvas-darwin-x64" "0.1.23"
+    "@napi-rs/canvas-linux-arm-gnueabihf" "0.1.23"
+    "@napi-rs/canvas-linux-arm64-gnu" "0.1.23"
+    "@napi-rs/canvas-linux-arm64-musl" "0.1.23"
+    "@napi-rs/canvas-linux-x64-gnu" "0.1.23"
+    "@napi-rs/canvas-linux-x64-musl" "0.1.23"
+    "@napi-rs/canvas-win32-x64-msvc" "0.1.23"
 
 "@napi-rs/image-android-arm-eabi@1.3.0":
   version "1.3.0"
