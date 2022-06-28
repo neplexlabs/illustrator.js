@@ -15,7 +15,7 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "check": "tsc --noEmit",
     "predocs": "rimraf docs",
-    "docs": "npx compodoc -p tsconfig.doc.json -d=./docs/ --customFavicon=./assets/logo.png --theme=laravel --disableDependencies --disableCoverage --disablePrivate --hideGenerator",
+    "docs": "npx compodoc -p tsconfig.doc.json -d docs --customFavicon=./assets/logo.png --theme=laravel --disableDependencies --disableCoverage --disablePrivate --hideGenerator",
     "format": "prettier --write {src,scripts,test,examples}/**/*.{js,ts}",
     "exportgen": "node scripts/exportgen.js",
     "lint": "eslint --fix",
