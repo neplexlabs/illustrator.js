@@ -964,8 +964,9 @@
   resolved "https://registry.npmjs.org/@commitlint/config-angular-type-enum/-/config-angular-type-enum-17.0.0.tgz"
 
 "@commitlint/config-angular@^17.0.0":
-  version "17.0.0"
-  resolved "https://registry.npmjs.org/@commitlint/config-angular/-/config-angular-17.0.0.tgz"
+  version "17.0.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-angular/-/config-angular-17.0.3.tgz#6a53c3b28cad1e0ff3d78d90e0214db88e529f62"
+  integrity sha512-syeEtOmkLEyrq2VVJxvvtMUYovFCg3QVK818FA6lmUqgi+HtoM5zgm1ZjF6CUgZc4PcyAwfQwRjVtmeQC2yBEA==
   dependencies:
     "@commitlint/config-angular-type-enum" "^17.0.0"
 
