@@ -12,10 +12,10 @@ CURRENT_BRANCH=`awk -F/ '{print $NF}' <<< $GITHUB_REF`
 TARGET_BRANCH="docs"
 git clone $REPO out -b $TARGET_BRANCH
 
-mv docs out
+mv docs out/docs
 
 cd out
-git add .
+git add docs
 git config user.name "CesiumLabsBot"
 git config user.email "103743930+CesiumLabsBot@users.noreply.github.com"
 git config user.password $GITHUB_TOKEN
