@@ -75,5 +75,6 @@
     "@skyra/gifenc": "^1.0.0",
     "is-buffer-like": "^1.0.0",
     "tslib": "^2.4.0"
-  }
+  },
+  "packageManager": "yarn@3.2.1"
 }
