@@ -14,6 +14,13 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: .yarn/cache
+          key: bench-yarn-cache-node-18
+      - name: 📥 Install dependencies
+        run: yarn install --immutable
       - run: yarn install
       - run: yarn build
       - run: npm publish --access public

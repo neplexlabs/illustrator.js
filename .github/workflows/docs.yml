@@ -19,8 +19,14 @@ jobs:
         with:
           node-version: 18
 
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: .yarn/cache
+          key: bench-yarn-cache-node-18
+
       - name: 📥 Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: yarn install --immutable
 
       - name: 📃 Run Docs Generator
         uses: ./.github/actions/docs
