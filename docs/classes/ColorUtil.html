@@ -1,0 +1,915 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>illustrator.js documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/laravel.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">illustrator.js documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li >ColorUtil</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/utils/ColorUtil.ts</code>
+        </p>
+
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#Colors" >Colors</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#hexToRGBA" >hexToRGBA</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#isHex" >isHex</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#randomHex" >randomHex</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#resolveHex" >resolveHex</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Colors"></a>
+                    <span class="name">
+                            <span class="modifier">Static</span>
+                        <span ><b>Colors</b></span>
+                        <a href="#Colors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+        DC_DEFAULT: &quot;#000000&quot;,
+        DC_WHITE: &quot;#FFFFFF&quot;,
+        DC_AQUA: &quot;#1ABC9C&quot;,
+        DC_GREEN: &quot;#2ECC71&quot;,
+        DC_BLUE: &quot;#3498DB&quot;,
+        DC_YELLOW: &quot;#FFFF00&quot;,
+        DC_PURPLE: &quot;#9B59B6&quot;,
+        DC_LUMINOUS_VIVID_PINK: &quot;#E91E63&quot;,
+        DC_GOLD: &quot;#F1C40F&quot;,
+        DC_ORANGE: &quot;#E67E22&quot;,
+        DC_RED: &quot;#E74C3C&quot;,
+        DC_GREY: &quot;#95A5A6&quot;,
+        DC_NAVY: &quot;#34495E&quot;,
+        DC_DARK_AQUA: &quot;#11806A&quot;,
+        DC_DARK_GREEN: &quot;#1F8B4C&quot;,
+        DC_DARK_BLUE: &quot;#206694&quot;,
+        DC_DARK_PURPLE: &quot;#71368A&quot;,
+        DC_DARK_VIVID_PINK: &quot;#AD1457&quot;,
+        DC_DARK_GOLD: &quot;#C27C0E&quot;,
+        DC_DARK_ORANGE: &quot;#A84300&quot;,
+        DC_DARK_RED: &quot;#992D22&quot;,
+        DC_DARK_GREY: &quot;#979C9F&quot;,
+        DC_DARKER_GREY: &quot;#7F8C8D&quot;,
+        DC_LIGHT_GREY: &quot;#BCC0C0&quot;,
+        DC_DARK_NAVY: &quot;#2C3E50&quot;,
+        DC_BLURPLE: &quot;#7289DA&quot;,
+        DC_DARK_BLURPLE: &quot;#4D5E94&quot;,
+        DC_GREYPLE: &quot;#99AAB5&quot;,
+        DC_DARK_BUT_NOT_BLACK: &quot;#2C2F33&quot;,
+        DC_NOT_QUITE_BLACK: &quot;#23272A&quot;,
+        aliceblue: &quot;#F0F8FF&quot;,
+        antiquewhite: &quot;#FAEBD7&quot;,
+        aqua: &quot;#00FFFF&quot;,
+        aquamarine: &quot;#7FFFD4&quot;,
+        azure: &quot;#F0FFFF&quot;,
+        beige: &quot;#F5F5DC&quot;,
+        bisque: &quot;#FFE4C4&quot;,
+        black: &quot;#000000&quot;,
+        blanchedalmond: &quot;#FFEBCD&quot;,
+        blue: &quot;#0000FF&quot;,
+        blueviolet: &quot;#8A2BE2&quot;,
+        brown: &quot;#A52A2A&quot;,
+        burlywood: &quot;#DEB887&quot;,
+        cadetblue: &quot;#5F9EA0&quot;,
+        chartreuse: &quot;#7FFF00&quot;,
+        chocolate: &quot;#D2691E&quot;,
+        coral: &quot;#FF7F50&quot;,
+        cornflowerblue: &quot;#6495ED&quot;,
+        cornsilk: &quot;#FFF8DC&quot;,
+        crimson: &quot;#DC143C&quot;,
+        cyan: &quot;#00FFFF&quot;,
+        darkblue: &quot;#00008B&quot;,
+        darkcyan: &quot;#008B8B&quot;,
+        darkgoldenrod: &quot;#B8860B&quot;,
+        darkgray: &quot;#A9A9A9&quot;,
+        darkgreen: &quot;#006400&quot;,
+        darkgrey: &quot;#A9A9A9&quot;,
+        darkkhaki: &quot;#BDB76B&quot;,
+        darkmagenta: &quot;#8B008B&quot;,
+        darkolivegreen: &quot;#556B2F&quot;,
+        darkorange: &quot;#FF8C00&quot;,
+        darkorchid: &quot;#9932CC&quot;,
+        darkred: &quot;#8B0000&quot;,
+        darksalmon: &quot;#E9967A&quot;,
+        darkseagreen: &quot;#8FBC8F&quot;,
+        darkslateblue: &quot;#483D8B&quot;,
+        darkslategray: &quot;#2F4F4F&quot;,
+        darkslategrey: &quot;#2F4F4F&quot;,
+        darkturquoise: &quot;#00CED1&quot;,
+        darkviolet: &quot;#9400D3&quot;,
+        deeppink: &quot;#FF1493&quot;,
+        deepskyblue: &quot;#00BFFF&quot;,
+        dimgray: &quot;#696969&quot;,
+        dimgrey: &quot;#696969&quot;,
+        dodgerblue: &quot;#1E90FF&quot;,
+        firebrick: &quot;#B22222&quot;,
+        floralwhite: &quot;#FFFAF0&quot;,
+        forestgreen: &quot;#228B22&quot;,
+        fuchsia: &quot;#FF00FF&quot;,
+        gainsboro: &quot;#DCDCDC&quot;,
+        ghostwhite: &quot;#F8F8FF&quot;,
+        goldenrod: &quot;#DAA520&quot;,
+        gold: &quot;#FFD700&quot;,
+        gray: &quot;#808080&quot;,
+        green: &quot;#008000&quot;,
+        greenyellow: &quot;#ADFF2F&quot;,
+        grey: &quot;#808080&quot;,
+        honeydew: &quot;#F0FFF0&quot;,
+        hotpink: &quot;#FF69B4&quot;,
+        indianred: &quot;#CD5C5C&quot;,
+        indigo: &quot;#4B0082&quot;,
+        ivory: &quot;#FFFFF0&quot;,
+        khaki: &quot;#F0E68C&quot;,
+        lavenderblush: &quot;#FFF0F5&quot;,
+        lavender: &quot;#E6E6FA&quot;,
+        lawngreen: &quot;#7CFC00&quot;,
+        lemonchiffon: &quot;#FFFACD&quot;,
+        lightblue: &quot;#ADD8E6&quot;,
+        lightcoral: &quot;#F08080&quot;,
+        lightcyan: &quot;#E0FFFF&quot;,
+        lightgoldenrodyellow: &quot;#FAFAD2&quot;,
+        lightgray: &quot;#D3D3D3&quot;,
+        lightgreen: &quot;#90EE90&quot;,
+        lightgrey: &quot;#D3D3D3&quot;,
+        lightpink: &quot;#FFB6C1&quot;,
+        lightsalmon: &quot;#FFA07A&quot;,
+        lightseagreen: &quot;#20B2AA&quot;,
+        lightskyblue: &quot;#87CEFA&quot;,
+        lightslategray: &quot;#778899&quot;,
+        lightslategrey: &quot;#778899&quot;,
+        lightsteelblue: &quot;#B0C4DE&quot;,
+        lightyellow: &quot;#FFFFE0&quot;,
+        lime: &quot;#00FF00&quot;,
+        limegreen: &quot;#32CD32&quot;,
+        linen: &quot;#FAF0E6&quot;,
+        magenta: &quot;#FF00FF&quot;,
+        maroon: &quot;#800000&quot;,
+        mediumaquamarine: &quot;#66CDAA&quot;,
+        mediumblue: &quot;#0000CD&quot;,
+        mediumorchid: &quot;#BA55D3&quot;,
+        mediumpurple: &quot;#9370DB&quot;,
+        mediumseagreen: &quot;#3CB371&quot;,
+        mediumslateblue: &quot;#7B68EE&quot;,
+        mediumspringgreen: &quot;#00FA9A&quot;,
+        mediumturquoise: &quot;#48D1CC&quot;,
+        mediumvioletred: &quot;#C71585&quot;,
+        midnightblue: &quot;#191970&quot;,
+        mintcream: &quot;#F5FFFA&quot;,
+        mistyrose: &quot;#FFE4E1&quot;,
+        moccasin: &quot;#FFE4B5&quot;,
+        navajowhite: &quot;#FFDEAD&quot;,
+        navy: &quot;#000080&quot;,
+        oldlace: &quot;#FDF5E6&quot;,
+        olive: &quot;#808000&quot;,
+        olivedrab: &quot;#6B8E23&quot;,
+        orange: &quot;#FFA500&quot;,
+        orangered: &quot;#FF4500&quot;,
+        orchid: &quot;#DA70D6&quot;,
+        palegoldenrod: &quot;#EEE8AA&quot;,
+        palegreen: &quot;#98FB98&quot;,
+        paleturquoise: &quot;#AFEEEE&quot;,
+        palevioletred: &quot;#DB7093&quot;,
+        papayawhip: &quot;#FFEFD5&quot;,
+        peachpuff: &quot;#FFDAB9&quot;,
+        peru: &quot;#CD853F&quot;,
+        pink: &quot;#FFC0CB&quot;,
+        plum: &quot;#DDA0DD&quot;,
+        powderblue: &quot;#B0E0E6&quot;,
+        purple: &quot;#800080&quot;,
+        rebeccapurple: &quot;#663399&quot;,
+        red: &quot;#FF0000&quot;,
+        rosybrown: &quot;#BC8F8F&quot;,
+        royalblue: &quot;#4169E1&quot;,
+        saddlebrown: &quot;#8B4513&quot;,
+        salmon: &quot;#FA8072&quot;,
+        sandybrown: &quot;#F4A460&quot;,
+        seagreen: &quot;#2E8B57&quot;,
+        seashell: &quot;#FFF5EE&quot;,
+        sienna: &quot;#A0522D&quot;,
+        silver: &quot;#C0C0C0&quot;,
+        skyblue: &quot;#87CEEB&quot;,
+        slateblue: &quot;#6A5ACD&quot;,
+        slategray: &quot;#708090&quot;,
+        slategrey: &quot;#708090&quot;,
+        snow: &quot;#FFFAFA&quot;,
+        springgreen: &quot;#00FF7F&quot;,
+        steelblue: &quot;#4682B4&quot;,
+        tan: &quot;#D2B48C&quot;,
+        teal: &quot;#008080&quot;,
+        thistle: &quot;#D8BFD8&quot;,
+        tomato: &quot;#FF6347&quot;,
+        turquoise: &quot;#40E0D0&quot;,
+        violet: &quot;#EE82EE&quot;,
+        wheat: &quot;#F5DEB3&quot;,
+        white: &quot;#FFFFFF&quot;,
+        whitesmoke: &quot;#F5F5F5&quot;,
+        yellow: &quot;#FFFF00&quot;,
+        yellowgreen: &quot;#9ACD32&quot;
+    }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/utils/ColorUtil.ts:6</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hexToRGBA"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>hexToRGBA</b></span>
+                        <a href="#hexToRGBA"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hexToRGBA(hex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="191"
+                            class="link-to-prism">src/utils/ColorUtil.ts:191</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>hex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isHex"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>isHex</b></span>
+                        <a href="#isHex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isHex(hex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">src/utils/ColorUtil.ts:187</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>hex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>template literal type</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="randomHex"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>randomHex</b></span>
+                        <a href="#randomHex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>randomHex()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="219"
+                            class="link-to-prism">src/utils/ColorUtil.ts:219</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>template literal type</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resolveHex"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>resolveHex</b></span>
+                        <a href="#resolveHex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>resolveHex(color:  | "RANDOM")</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="225"
+                            class="link-to-prism">src/utils/ColorUtil.ts:225</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>color</td>
+                                    <td>
+                                            <code> | &quot;RANDOM&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class ColorUtil extends null {
+    private constructor() {
+        /* noop */
+    }
+
+    static Colors &#x3D; {
+        DC_DEFAULT: &quot;#000000&quot;,
+        DC_WHITE: &quot;#FFFFFF&quot;,
+        DC_AQUA: &quot;#1ABC9C&quot;,
+        DC_GREEN: &quot;#2ECC71&quot;,
+        DC_BLUE: &quot;#3498DB&quot;,
+        DC_YELLOW: &quot;#FFFF00&quot;,
+        DC_PURPLE: &quot;#9B59B6&quot;,
+        DC_LUMINOUS_VIVID_PINK: &quot;#E91E63&quot;,
+        DC_GOLD: &quot;#F1C40F&quot;,
+        DC_ORANGE: &quot;#E67E22&quot;,
+        DC_RED: &quot;#E74C3C&quot;,
+        DC_GREY: &quot;#95A5A6&quot;,
+        DC_NAVY: &quot;#34495E&quot;,
+        DC_DARK_AQUA: &quot;#11806A&quot;,
+        DC_DARK_GREEN: &quot;#1F8B4C&quot;,
+        DC_DARK_BLUE: &quot;#206694&quot;,
+        DC_DARK_PURPLE: &quot;#71368A&quot;,
+        DC_DARK_VIVID_PINK: &quot;#AD1457&quot;,
+        DC_DARK_GOLD: &quot;#C27C0E&quot;,
+        DC_DARK_ORANGE: &quot;#A84300&quot;,
+        DC_DARK_RED: &quot;#992D22&quot;,
+        DC_DARK_GREY: &quot;#979C9F&quot;,
+        DC_DARKER_GREY: &quot;#7F8C8D&quot;,
+        DC_LIGHT_GREY: &quot;#BCC0C0&quot;,
+        DC_DARK_NAVY: &quot;#2C3E50&quot;,
+        DC_BLURPLE: &quot;#7289DA&quot;,
+        DC_DARK_BLURPLE: &quot;#4D5E94&quot;,
+        DC_GREYPLE: &quot;#99AAB5&quot;,
+        DC_DARK_BUT_NOT_BLACK: &quot;#2C2F33&quot;,
+        DC_NOT_QUITE_BLACK: &quot;#23272A&quot;,
+        aliceblue: &quot;#F0F8FF&quot;,
+        antiquewhite: &quot;#FAEBD7&quot;,
+        aqua: &quot;#00FFFF&quot;,
+        aquamarine: &quot;#7FFFD4&quot;,
+        azure: &quot;#F0FFFF&quot;,
+        beige: &quot;#F5F5DC&quot;,
+        bisque: &quot;#FFE4C4&quot;,
+        black: &quot;#000000&quot;,
+        blanchedalmond: &quot;#FFEBCD&quot;,
+        blue: &quot;#0000FF&quot;,
+        blueviolet: &quot;#8A2BE2&quot;,
+        brown: &quot;#A52A2A&quot;,
+        burlywood: &quot;#DEB887&quot;,
+        cadetblue: &quot;#5F9EA0&quot;,
+        chartreuse: &quot;#7FFF00&quot;,
+        chocolate: &quot;#D2691E&quot;,
+        coral: &quot;#FF7F50&quot;,
+        cornflowerblue: &quot;#6495ED&quot;,
+        cornsilk: &quot;#FFF8DC&quot;,
+        crimson: &quot;#DC143C&quot;,
+        cyan: &quot;#00FFFF&quot;,
+        darkblue: &quot;#00008B&quot;,
+        darkcyan: &quot;#008B8B&quot;,
+        darkgoldenrod: &quot;#B8860B&quot;,
+        darkgray: &quot;#A9A9A9&quot;,
+        darkgreen: &quot;#006400&quot;,
+        darkgrey: &quot;#A9A9A9&quot;,
+        darkkhaki: &quot;#BDB76B&quot;,
+        darkmagenta: &quot;#8B008B&quot;,
+        darkolivegreen: &quot;#556B2F&quot;,
+        darkorange: &quot;#FF8C00&quot;,
+        darkorchid: &quot;#9932CC&quot;,
+        darkred: &quot;#8B0000&quot;,
+        darksalmon: &quot;#E9967A&quot;,
+        darkseagreen: &quot;#8FBC8F&quot;,
+        darkslateblue: &quot;#483D8B&quot;,
+        darkslategray: &quot;#2F4F4F&quot;,
+        darkslategrey: &quot;#2F4F4F&quot;,
+        darkturquoise: &quot;#00CED1&quot;,
+        darkviolet: &quot;#9400D3&quot;,
+        deeppink: &quot;#FF1493&quot;,
+        deepskyblue: &quot;#00BFFF&quot;,
+        dimgray: &quot;#696969&quot;,
+        dimgrey: &quot;#696969&quot;,
+        dodgerblue: &quot;#1E90FF&quot;,
+        firebrick: &quot;#B22222&quot;,
+        floralwhite: &quot;#FFFAF0&quot;,
+        forestgreen: &quot;#228B22&quot;,
+        fuchsia: &quot;#FF00FF&quot;,
+        gainsboro: &quot;#DCDCDC&quot;,
+        ghostwhite: &quot;#F8F8FF&quot;,
+        goldenrod: &quot;#DAA520&quot;,
+        gold: &quot;#FFD700&quot;,
+        gray: &quot;#808080&quot;,
+        green: &quot;#008000&quot;,
+        greenyellow: &quot;#ADFF2F&quot;,
+        grey: &quot;#808080&quot;,
+        honeydew: &quot;#F0FFF0&quot;,
+        hotpink: &quot;#FF69B4&quot;,
+        indianred: &quot;#CD5C5C&quot;,
+        indigo: &quot;#4B0082&quot;,
+        ivory: &quot;#FFFFF0&quot;,
+        khaki: &quot;#F0E68C&quot;,
+        lavenderblush: &quot;#FFF0F5&quot;,
+        lavender: &quot;#E6E6FA&quot;,
+        lawngreen: &quot;#7CFC00&quot;,
+        lemonchiffon: &quot;#FFFACD&quot;,
+        lightblue: &quot;#ADD8E6&quot;,
+        lightcoral: &quot;#F08080&quot;,
+        lightcyan: &quot;#E0FFFF&quot;,
+        lightgoldenrodyellow: &quot;#FAFAD2&quot;,
+        lightgray: &quot;#D3D3D3&quot;,
+        lightgreen: &quot;#90EE90&quot;,
+        lightgrey: &quot;#D3D3D3&quot;,
+        lightpink: &quot;#FFB6C1&quot;,
+        lightsalmon: &quot;#FFA07A&quot;,
+        lightseagreen: &quot;#20B2AA&quot;,
+        lightskyblue: &quot;#87CEFA&quot;,
+        lightslategray: &quot;#778899&quot;,
+        lightslategrey: &quot;#778899&quot;,
+        lightsteelblue: &quot;#B0C4DE&quot;,
+        lightyellow: &quot;#FFFFE0&quot;,
+        lime: &quot;#00FF00&quot;,
+        limegreen: &quot;#32CD32&quot;,
+        linen: &quot;#FAF0E6&quot;,
+        magenta: &quot;#FF00FF&quot;,
+        maroon: &quot;#800000&quot;,
+        mediumaquamarine: &quot;#66CDAA&quot;,
+        mediumblue: &quot;#0000CD&quot;,
+        mediumorchid: &quot;#BA55D3&quot;,
+        mediumpurple: &quot;#9370DB&quot;,
+        mediumseagreen: &quot;#3CB371&quot;,
+        mediumslateblue: &quot;#7B68EE&quot;,
+        mediumspringgreen: &quot;#00FA9A&quot;,
+        mediumturquoise: &quot;#48D1CC&quot;,
+        mediumvioletred: &quot;#C71585&quot;,
+        midnightblue: &quot;#191970&quot;,
+        mintcream: &quot;#F5FFFA&quot;,
+        mistyrose: &quot;#FFE4E1&quot;,
+        moccasin: &quot;#FFE4B5&quot;,
+        navajowhite: &quot;#FFDEAD&quot;,
+        navy: &quot;#000080&quot;,
+        oldlace: &quot;#FDF5E6&quot;,
+        olive: &quot;#808000&quot;,
+        olivedrab: &quot;#6B8E23&quot;,
+        orange: &quot;#FFA500&quot;,
+        orangered: &quot;#FF4500&quot;,
+        orchid: &quot;#DA70D6&quot;,
+        palegoldenrod: &quot;#EEE8AA&quot;,
+        palegreen: &quot;#98FB98&quot;,
+        paleturquoise: &quot;#AFEEEE&quot;,
+        palevioletred: &quot;#DB7093&quot;,
+        papayawhip: &quot;#FFEFD5&quot;,
+        peachpuff: &quot;#FFDAB9&quot;,
+        peru: &quot;#CD853F&quot;,
+        pink: &quot;#FFC0CB&quot;,
+        plum: &quot;#DDA0DD&quot;,
+        powderblue: &quot;#B0E0E6&quot;,
+        purple: &quot;#800080&quot;,
+        rebeccapurple: &quot;#663399&quot;,
+        red: &quot;#FF0000&quot;,
+        rosybrown: &quot;#BC8F8F&quot;,
+        royalblue: &quot;#4169E1&quot;,
+        saddlebrown: &quot;#8B4513&quot;,
+        salmon: &quot;#FA8072&quot;,
+        sandybrown: &quot;#F4A460&quot;,
+        seagreen: &quot;#2E8B57&quot;,
+        seashell: &quot;#FFF5EE&quot;,
+        sienna: &quot;#A0522D&quot;,
+        silver: &quot;#C0C0C0&quot;,
+        skyblue: &quot;#87CEEB&quot;,
+        slateblue: &quot;#6A5ACD&quot;,
+        slategray: &quot;#708090&quot;,
+        slategrey: &quot;#708090&quot;,
+        snow: &quot;#FFFAFA&quot;,
+        springgreen: &quot;#00FF7F&quot;,
+        steelblue: &quot;#4682B4&quot;,
+        tan: &quot;#D2B48C&quot;,
+        teal: &quot;#008080&quot;,
+        thistle: &quot;#D8BFD8&quot;,
+        tomato: &quot;#FF6347&quot;,
+        turquoise: &quot;#40E0D0&quot;,
+        violet: &quot;#EE82EE&quot;,
+        wheat: &quot;#F5DEB3&quot;,
+        white: &quot;#FFFFFF&quot;,
+        whitesmoke: &quot;#F5F5F5&quot;,
+        yellow: &quot;#FFFF00&quot;,
+        yellowgreen: &quot;#9ACD32&quot;
+    };
+
+    public static isHex(hex: string): hex is &#x60;#${string}&#x60; {
+        return /^#(([\dA-Fa-f]{3}){1,2}|([\dA-Fa-f]{4}){1,2})$/.test(hex);
+    }
+
+    public static hexToRGBA(hex: string) {
+        let c: string[] &#x3D; hex.substring(1).split(&quot;&quot;);
+
+        if (!ColorUtil.isHex(hex)) {
+            return new Array(4).fill(&quot;0&quot;);
+        }
+
+        switch (c.length) {
+            case 3:
+                c &#x3D; [c[0] + c[0], c[1] + c[1], c[2] + c[2], &quot;ff&quot;];
+                break;
+            case 4:
+                c &#x3D; [c[0] + c[0], c[1] + c[1], c[2] + c[2], c[3] + c[3]];
+                break;
+            case 6:
+                c &#x3D; [c[0] + c[1], c[2] + c[3], c[4] + c[5], &quot;ff&quot;];
+                break;
+            case 8:
+                c &#x3D; [c[0] + c[1], c[2] + c[3], c[4] + c[5], c[6] + c[7]];
+                break;
+        }
+
+        c &#x3D; c.map((char) &#x3D;&gt; parseInt(char, 16).toString());
+        c[3] &#x3D; (Math.round((parseInt(c[3], 10) / 255) * 100) / 100).toString();
+        if (c[3] &#x3D;&#x3D;&#x3D; &quot;1&quot;) c.pop();
+        return c;
+    }
+
+    public static randomHex(): &#x60;#${string}&#x60; {
+        return &#x60;#${Math.floor(Math.random() * 16777216)
+            .toString(16)
+            .padStart(6, &quot;0&quot;)}&#x60;;
+    }
+
+    public static resolveHex(color: keyof typeof ColorUtil.Colors | &quot;RANDOM&quot;) {
+        if (color &#x3D;&#x3D;&#x3D; &quot;RANDOM&quot;) return ColorUtil.randomHex();
+        return ColorUtil.Colors[color] ?? &quot;#000000&quot;;
+    }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'ColorUtil.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
