@@ -10,7 +10,7 @@
     "require": "./dist/index.js"
   },
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "build": "rimraf dist && tsc && yarn postbuild",
     "postbuild": "node scripts/postbuild.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "check": "tsc --noEmit",

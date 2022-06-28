@@ -1,9 +1,7 @@
-<div align="left">
-    <img src="https://raw.githubusercontent.com/DevAndromeda/illustrator.js/06de5d9cb50f8e4caf76fd20bb16cefc3fdef396/assets/logo.png" alt="illustrator.js" height="128" width="128" style="border-radius:7px;" align="right" />
-    <div align="left">
-         <h1>Illustrator.js</h1>
-         <p>JavaScript image processing library</p>
-    </div>
+<div align="center">
+    <img src="https://raw.githubusercontent.com/DevAndromeda/illustrator.js/main/assets/logo.png" alt="illustrator.js" height="128" width="128" align="center" style="border:3px solid #4D5E94;" />
+    <a href="https://illustrator.js.org"><h1>Illustrator.js</h1></a>
+    <p>JavaScript image processing library</p>
 </div>
 
 -----------------------
@@ -44,9 +42,6 @@ and more...
 # Quick Example
 
 ## Creating GIF
-
-<details>
-<summary>Show code</summary>
 
 ```js
 // import
@@ -94,7 +89,6 @@ output.pipe(fs.createWriteStream("./animation.gif"));
 #### Output Preview
 
 <img src="https://raw.githubusercontent.com/DevAndromeda/illustrator.js/main/examples/gif/animation.gif" alt="gif-example" height="128" width="128" />
-</details>
 
 ## Other Examples
 
