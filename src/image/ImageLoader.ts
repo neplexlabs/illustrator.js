@@ -6,6 +6,7 @@ import { Readable } from "stream";
 import { Illustrator } from "../illustrator/Illustrator";
 import { IllustratorImage } from "./IllustratorImage";
 import { Layer } from "../layer/Layer";
+import isBufferLike from "is-buffer-like";
 
 export type IllustratorImageSource =
     | string
@@ -82,8 +83,7 @@ export class ImageLoader extends null {
     public static async loadImage(source: IllustratorImageSource, bufferOnly?: boolean): Promise<Image | Buffer> {
         if (source instanceof Readable) return createImage(await consumeStream(source), bufferOnly);
         if (Buffer.isBuffer(source)) return createImage(source, bufferOnly);
-        if (source instanceof ArrayBuffer || source instanceof SharedArrayBuffer || source instanceof Uint8Array)
-            return createImage(Buffer.from(source), bufferOnly);
+        if (isBufferLike(source)) return createImage(Buffer.from(source as Buffer), bufferOnly);
         if (source instanceof Image) return createImage(source.src, bufferOnly);
         if (source instanceof Canvas) return createImage(await source.encode("png"), bufferOnly);
         if (source instanceof Layer)
