@@ -31,9 +31,6 @@ jobs:
       - name: 📥 Install dependencies
         run: yarn install --immutable
 
-      - name: Install dependencies
-        run: yarn install
-
       - name: Run ESLint
         run: yarn run lint
 
