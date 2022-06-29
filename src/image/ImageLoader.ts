@@ -8,6 +8,8 @@ import { IllustratorImage } from "./IllustratorImage";
 import { Layer } from "../layer/Layer";
 import * as isBufferLike from "is-buffer-like";
 
+const REDIRECT_STATUSES = new Set([301, 302]);
+
 export type IllustratorImageSource =
     | string
     | URL
@@ -50,11 +52,13 @@ function makeRequest(
     const reqBy = url.protocol === "http:" ? http : https;
     reqBy.get(url, (res) => {
         const shouldRedirect =
-            [301, 302].includes(res.statusCode as number) && typeof res.headers.location === "string";
+            REDIRECT_STATUSES.has(res.statusCode as number) && typeof res.headers.location === "string";
         if (shouldRedirect && redirectCount > 0)
             return makeRequest(res.headers.location as string, redirectCount - 1, resolve, reject);
-        if (typeof res.statusCode === "number" && !(res.statusCode >= 200 && res.statusCode < 300)) {
-            return reject(new Error(`request for image source rejected with status code "${res.statusCode}"`));
+        if (typeof res.statusCode === "number" && (res.statusCode < 200 || res.statusCode >= 300)) {
+            return reject(
+                new Error(`request for the given image source rejected with status code "${res.statusCode}"`)
+            );
         }
 
         consumeStream(res).then(resolve, reject);
