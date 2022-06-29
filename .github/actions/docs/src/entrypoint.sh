@@ -12,7 +12,8 @@ CURRENT_BRANCH=`awk -F/ '{print $NF}' <<< $GITHUB_REF`
 TARGET_BRANCH="docs"
 git clone $REPO out -b $TARGET_BRANCH
 
-mv docs out
+rm -rf out/docs
+mv docs out/docs
 
 cd out
 git add .
