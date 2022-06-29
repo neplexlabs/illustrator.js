@@ -144,8 +144,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="126"
-                            class="link-to-prism">src/image/ImageLoader.ts:126</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="131"
+                            class="link-to-prism">src/image/ImageLoader.ts:131</a></div>
                 </td>
             </tr>
 
@@ -223,8 +223,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="81"
-                            class="link-to-prism">src/image/ImageLoader.ts:81</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/image/ImageLoader.ts:85</a></div>
                 </td>
             </tr>
 
@@ -323,8 +323,8 @@ console.log(image.width, image.height);</code></pre>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="82"
-                            class="link-to-prism">src/image/ImageLoader.ts:82</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/image/ImageLoader.ts:86</a></div>
                 </td>
             </tr>
 
@@ -406,8 +406,8 @@ console.log(image.width, image.height);</code></pre>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="83"
-                            class="link-to-prism">src/image/ImageLoader.ts:83</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/image/ImageLoader.ts:87</a></div>
                 </td>
             </tr>
 
@@ -485,7 +485,9 @@ import { Readable } from &quot;stream&quot;;
 import { Illustrator } from &quot;../illustrator/Illustrator&quot;;
 import { IllustratorImage } from &quot;./IllustratorImage&quot;;
 import { Layer } from &quot;../layer/Layer&quot;;
-import isBufferLike from &quot;is-buffer-like&quot;;
+import * as isBufferLike from &quot;is-buffer-like&quot;;
+
+const REDIRECT_STATUSES &#x3D; new Set([301, 302]);
 
 export type IllustratorImageSource &#x3D;
     | string
@@ -529,11 +531,13 @@ function makeRequest(
     const reqBy &#x3D; url.protocol &#x3D;&#x3D;&#x3D; &quot;http:&quot; ? http : https;
     reqBy.get(url, (res) &#x3D;&gt; {
         const shouldRedirect &#x3D;
-            [301, 302].includes(res.statusCode as number) &amp;&amp; typeof res.headers.location &#x3D;&#x3D;&#x3D; &quot;string&quot;;
+            REDIRECT_STATUSES.has(res.statusCode as number) &amp;&amp; typeof res.headers.location &#x3D;&#x3D;&#x3D; &quot;string&quot;;
         if (shouldRedirect &amp;&amp; redirectCount &gt; 0)
             return makeRequest(res.headers.location as string, redirectCount - 1, resolve, reject);
-        if (typeof res.statusCode &#x3D;&#x3D;&#x3D; &quot;number&quot; &amp;&amp; !(res.statusCode &gt;&#x3D; 200 &amp;&amp; res.statusCode &lt; 300)) {
-            return reject(new Error(&#x60;request for image source rejected with status code &quot;${res.statusCode}&quot;&#x60;));
+        if (typeof res.statusCode &#x3D;&#x3D;&#x3D; &quot;number&quot; &amp;&amp; (res.statusCode &lt; 200 || res.statusCode &gt;&#x3D; 300)) {
+            return reject(
+                new Error(&#x60;request for the given image source rejected with status code &quot;${res.statusCode}&quot;&#x60;)
+            );
         }
 
         consumeStream(res).then(resolve, reject);
@@ -562,6 +566,7 @@ export class ImageLoader extends null {
     public static async loadImage(source: IllustratorImageSource, bufferOnly?: boolean): Promise&lt;Image | Buffer&gt; {
         if (source instanceof Readable) return createImage(await consumeStream(source), bufferOnly);
         if (Buffer.isBuffer(source)) return createImage(source, bufferOnly);
+        // @ts-expect-error
         if (isBufferLike(source)) return createImage(Buffer.from(source as Buffer), bufferOnly);
         if (source instanceof Image) return createImage(source.src, bufferOnly);
         if (source instanceof Canvas) return createImage(await source.encode(&quot;png&quot;), bufferOnly);
