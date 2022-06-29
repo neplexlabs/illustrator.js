@@ -13,7 +13,7 @@ TARGET_BRANCH="docs"
 git clone $REPO out -b $TARGET_BRANCH
 
 rm -rf out/docs
-mv docs out/docs
+mv docs out
 
 cd out
 git add .
