@@ -104,8 +104,8 @@ Check out **[Canvacord](https://github.com/CesiumLabs/canvacord)** for beginner-
 
 # Discord
 
-Join our official Discord support server: **[Join Now](https://discord.gg/uqB8kxh)**
+Join my official Discord server: **[https://discord.gg/CR8JxrxSwr](https://discord.gg/CR8JxrxSwr)**
 
-# Help us keep this project alive
+# Help me keep this project alive
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G05KFHP)
