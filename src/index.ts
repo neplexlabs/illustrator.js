@@ -15,20 +15,3 @@ export * from "./image/IllustratorImageManager";
 export * from "./layer/LayerTools";
 export * as SkCanvas from "@napi-rs/canvas";
 export * as SkImage from "@napi-rs/image";
-
-// export tools individually due to docgen issue
-export * from "./toolbox/image/Image";
-export * from "./toolbox/base/ToolBox";
-export * from "./toolbox/base/BaseShapeTool";
-export * from "./toolbox/color/BackgroundColor";
-export * from "./toolbox/text/Text";
-export * from "./toolbox/filters/Filter";
-export * from "./toolbox/filters/Shadow";
-export * from "./toolbox/filters/Sharpen";
-export * from "./toolbox/filters/ConvolutionFilter";
-export * from "./toolbox/shapes/Ellipse";
-export * from "./toolbox/transform/Transform";
-export * from "./toolbox/shapes/Line";
-export * from "./toolbox/shapes/Rectangle";
-export * from "./toolbox/eraser/Eraser";
-export * from "./toolbox/pixels/Pixels";
