@@ -16,8 +16,8 @@ export interface LayerTransformationData {
 }
 
 export class Layer {
-    #canvas: Canvas;
-    #ctx: SKRSContext2D;
+    public canvas: Canvas;
+    public ctx: SKRSContext2D;
     #locked = false;
     #hidden = false;
     #toolHistory: LayerToolHistory = [];
@@ -40,9 +40,9 @@ export class Layer {
     ) {
         this.height = options?.height ?? this.manager.illustrator.height;
         this.width = options?.width ?? this.manager.illustrator.width;
-        this.#canvas = createCanvas(this.width, this.height);
-        this.#ctx = this.#canvas.getContext("2d");
-        this.utils = new LayerUtils(this.#ctx);
+        this.canvas = createCanvas(this.width, this.height);
+        this.ctx = this.canvas.getContext("2d");
+        this.utils = new LayerUtils(this.ctx);
     }
 
     public get name() {
@@ -54,7 +54,7 @@ export class Layer {
     }
 
     public get context() {
-        return this.#ctx;
+        return this.ctx;
     }
 
     public get position() {
@@ -108,11 +108,11 @@ export class Layer {
     }
 
     public save() {
-        this.#ctx.save();
+        this.ctx.save();
     }
 
     public restore() {
-        this.#ctx.restore();
+        this.ctx.restore();
     }
 
     public duplicate(name = `${this.name} Copy`) {
@@ -142,7 +142,7 @@ export class Layer {
 
     public async render() {
         if (this.#hidden) return null;
-        await Promise.all(this.#toolHistory.flat(2).map((m) => m(this.#ctx)));
-        return this.#canvas;
+        await Promise.all(this.#toolHistory.flat(2).map((m) => m(this.ctx)));
+        return this.canvas;
     }
 }
