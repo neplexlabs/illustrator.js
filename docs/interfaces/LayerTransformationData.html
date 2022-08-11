@@ -253,8 +253,8 @@ export interface LayerTransformationData {
 }
 
 export class Layer {
-    #canvas: Canvas;
-    #ctx: SKRSContext2D;
+    public canvas: Canvas;
+    public ctx: SKRSContext2D;
     #locked &#x3D; false;
     #hidden &#x3D; false;
     #toolHistory: LayerToolHistory &#x3D; [];
@@ -277,9 +277,9 @@ export class Layer {
     ) {
         this.height &#x3D; options?.height ?? this.manager.illustrator.height;
         this.width &#x3D; options?.width ?? this.manager.illustrator.width;
-        this.#canvas &#x3D; createCanvas(this.width, this.height);
-        this.#ctx &#x3D; this.#canvas.getContext(&quot;2d&quot;);
-        this.utils &#x3D; new LayerUtils(this.#ctx);
+        this.canvas &#x3D; createCanvas(this.width, this.height);
+        this.ctx &#x3D; this.canvas.getContext(&quot;2d&quot;);
+        this.utils &#x3D; new LayerUtils(this.ctx);
     }
 
     public get name() {
@@ -291,7 +291,7 @@ export class Layer {
     }
 
     public get context() {
-        return this.#ctx;
+        return this.ctx;
     }
 
     public get position() {
@@ -345,11 +345,11 @@ export class Layer {
     }
 
     public save() {
-        this.#ctx.save();
+        this.ctx.save();
     }
 
     public restore() {
-        this.#ctx.restore();
+        this.ctx.restore();
     }
 
     public duplicate(name &#x3D; &#x60;${this.name} Copy&#x60;) {
@@ -379,8 +379,8 @@ export class Layer {
 
     public async render() {
         if (this.#hidden) return null;
-        await Promise.all(this.#toolHistory.flat(2).map((m) &#x3D;&gt; m(this.#ctx)));
-        return this.#canvas;
+        await Promise.all(this.#toolHistory.flat(2).map((m) &#x3D;&gt; m(this.ctx)));
+        return this.canvas;
     }
 }
 </code></pre>
