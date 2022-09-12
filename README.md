@@ -92,7 +92,13 @@ output.pipe(fs.createWriteStream("./animation.gif"));
 
 ## Other Examples
 
-Check out **[~/examples](https://github.com/DevAndromeda/illustrator.js/tree/main/examples)** for more.
+#### XP Card
+
+<img src="https://raw.githubusercontent.com/DevAndromeda/illustrator.js/main/examples/rank-card/rank-card.png" alt="rank-card-example" height="128" width="128" />
+
+[View Source](https://github.com/DevAndromeda/illustrator.js/tree/main/examples/rank-card)
+
+##### Check out **[~/examples](https://github.com/DevAndromeda/illustrator.js/tree/main/examples)** for more.
 
 # Canvacord
 
