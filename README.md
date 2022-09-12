@@ -94,7 +94,7 @@ output.pipe(fs.createWriteStream("./animation.gif"));
 
 #### XP Card
 
-<img src="https://raw.githubusercontent.com/DevAndromeda/illustrator.js/main/examples/rank-card/rank-card.png" alt="rank-card-example" height="128" width="128" />
+<img src="https://raw.githubusercontent.com/DevAndromeda/illustrator.js/main/examples/rank-card/rank-card.png" alt="rank-card-example" />
 
 [View Source](https://github.com/DevAndromeda/illustrator.js/tree/main/examples/rank-card)
 
