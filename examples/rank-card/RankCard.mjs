@@ -41,8 +41,8 @@ const textL = illustrator.layers.createLayer({
 });
 
 const xp = config.currentXp > config.requiredXp ? config.requiredXp : config.currentXp;
-const barWidth = xp / config.requiredXp * 1413;
-const perc = ((xp / config.requiredXp) * 100);
+const barWidth = (xp / config.requiredXp) * 1413;
+const perc = (xp / config.requiredXp) * 100;
 
 let textTool = textL.tools.get("TextTool");
 textTool.registerFontPath("./MANROPE_BOLD.ttf", "MANROPE_BOLD");
@@ -68,15 +68,18 @@ const xpText = illustrator.layers.createLayer({
 
 let textToolXP = xpText.tools.get("TextTool");
 
-textToolXP
-    .registerFontPath("MANROPE_BOLD", "MANROPE_BOLD");
+textToolXP.registerFontPath("MANROPE_BOLD", "MANROPE_BOLD");
 textToolXP
     .setColor("#A7A7A7")
     .setFont("MANROPE_BOLD", "40px")
     .writeText(`XP:`, 1060, illustrator.height / 2 + 120)
     .setColor("#FFFFFF")
     .setFont("MANROPE_BOLD", "40px")
-    .writeText(`${formatNumber(config.currentXp)}/${formatNumber(config.requiredXp)}`, 1140, illustrator.height / 2 + 120)
+    .writeText(
+        `${formatNumber(config.currentXp)}/${formatNumber(config.requiredXp)}`,
+        1140,
+        illustrator.height / 2 + 120
+    )
     .setFont("MANROPE_BOLD", "50px")
     .setColor("#A7A7A7")
     .writeText(`${perc.toFixed(2)}%`, illustrator.width - 330, illustrator.height / 2 + 15)

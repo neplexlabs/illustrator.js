@@ -1,6 +1,6 @@
 /**
  * @author SohamSuvarna
-*/
+ */
 
 import { Illustrator, ImageLoader } from "../../dist/index.mjs";
 // Use the following in prod

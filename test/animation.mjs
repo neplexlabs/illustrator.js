@@ -17,7 +17,7 @@ for (const color in colors) {
 }
 
 const animation = illustrator.animation;
-const layers = illustrator.layers.getAllLayers().map(m => ({
+const layers = illustrator.layers.getAllLayers().map((m) => ({
     duration: 100,
     frame: m.layer
 }));

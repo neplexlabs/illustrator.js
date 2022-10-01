@@ -29,7 +29,7 @@ ellipse.draw({
     rotation: Math.PI / 4,
     startAngle: 0,
     endAngle: 2 * Math.PI
-})
+});
 ellipse.fill();
 ellipse.removePoint();
 
@@ -45,7 +45,7 @@ ellipse.draw({
     rotation: Math.PI / 4,
     startAngle: 0,
     endAngle: 2 * Math.PI
-})
+});
 ellipse.stroke();
 ellipse.removePoint();
 
