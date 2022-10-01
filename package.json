@@ -1,79 +1,79 @@
 {
-  "name": "illustrator.js",
-  "version": "0.3.4",
-  "description": "JavaScript image processing library",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "module": "dist/index.mjs",
-  "exports": {
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.js"
-  },
-  "scripts": {
-    "build": "rimraf dist && tsc && yarn postbuild",
-    "postbuild": "node scripts/postbuild.js",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "check": "tsc --noEmit",
-    "predocs": "rimraf docs",
-    "docs": "npx compodoc -p tsconfig.doc.json -d docs --customFavicon=./assets/logo.png --theme=laravel --disableDependencies --disableCoverage --disablePrivate --hideGenerator",
-    "format": "prettier --write {src,scripts,test,examples}/**/*.{js,ts}",
-    "lint": "eslint --fix",
-    "prepare": "husky install"
-  },
-  "files": [
-    "dist"
-  ],
-  "directories": {
-    "lib": "src"
-  },
-  "contributors": [
-    "DevAndromeda <contact@dhunganakunjan.com.np>",
-    "Zyrouge <zyrouge@hotmail.com>",
-    "Soham Suvarna <soham@cesiumlabs.xyz>"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DevAndromeda/illustrator.js.git"
-  },
-  "keywords": [
-    "illustrator",
-    "canvas",
-    "image",
-    "javascript",
-    "api",
-    "processing",
-    "ijs"
-  ],
-  "author": "DevAndromeda <contact@dhunganakunjan.com.np>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DevAndromeda/illustrator.js/issues"
-  },
-  "homepage": "https://illustrator.js.org",
-  "devDependencies": {
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-angular": "17.0.3",
-    "@compodoc/compodoc": "1.1.19",
-    "@types/node": "18.7.1",
-    "@typescript-eslint/eslint-plugin": "5.33.0",
-    "@typescript-eslint/parser": "5.33.0",
-    "conventional-changelog-cli": "2.2.2",
-    "eslint": "8.21.0",
-    "husky": "8.0.1",
-    "prettier": "2.7.1",
-    "rimraf": "3.0.2",
-    "ts-node": "10.9.1",
-    "typescript": "4.7.4"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
-    "@napi-rs/canvas": "latest",
-    "@napi-rs/image": "^1.3.0",
-    "@skyra/gifenc": "^1.0.0",
-    "is-buffer-like": "^1.0.0",
-    "tslib": "^2.4.0"
-  },
-  "packageManager": "yarn@3.2.2"
+    "name": "illustrator.js",
+    "version": "0.3.4",
+    "description": "JavaScript image processing library",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "module": "dist/index.mjs",
+    "exports": {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.js"
+    },
+    "scripts": {
+        "build": "rimraf dist && tsc && yarn postbuild",
+        "postbuild": "node scripts/postbuild.js",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+        "check": "tsc --noEmit",
+        "predocs": "rimraf docs",
+        "docs": "npx compodoc -p tsconfig.doc.json -d docs --customFavicon=./assets/logo.png --theme=laravel --disableDependencies --disableCoverage --disablePrivate --hideGenerator",
+        "format": "prettier --write {src,scripts,test,examples}/**/*.{js,ts}",
+        "lint": "eslint --fix",
+        "prepare": "husky install"
+    },
+    "files": [
+        "dist"
+    ],
+    "directories": {
+        "lib": "src"
+    },
+    "contributors": [
+        "DevAndromeda <contact@dhunganakunjan.com.np>",
+        "Zyrouge <zyrouge@hotmail.com>",
+        "Soham Suvarna <soham@cesiumlabs.xyz>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DevAndromeda/illustrator.js.git"
+    },
+    "keywords": [
+        "illustrator",
+        "canvas",
+        "image",
+        "javascript",
+        "api",
+        "processing",
+        "ijs"
+    ],
+    "author": "DevAndromeda <contact@dhunganakunjan.com.np>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/DevAndromeda/illustrator.js/issues"
+    },
+    "homepage": "https://illustrator.js.org",
+    "devDependencies": {
+        "@commitlint/cli": "17.0.3",
+        "@commitlint/config-angular": "17.0.3",
+        "@compodoc/compodoc": "1.1.19",
+        "@types/node": "18.7.1",
+        "@typescript-eslint/eslint-plugin": "5.33.0",
+        "@typescript-eslint/parser": "5.33.0",
+        "conventional-changelog-cli": "2.2.2",
+        "eslint": "8.21.0",
+        "husky": "8.0.1",
+        "prettier": "2.7.1",
+        "rimraf": "3.0.2",
+        "ts-node": "10.9.1",
+        "typescript": "4.7.4"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@napi-rs/canvas": "latest",
+        "@napi-rs/image": "^1.3.0",
+        "@skyra/gifenc": "^1.0.0",
+        "is-buffer-like": "^1.0.0",
+        "tslib": "^2.4.0"
+    },
+    "packageManager": "yarn@3.2.2"
 }

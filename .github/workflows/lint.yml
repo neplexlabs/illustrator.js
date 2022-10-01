@@ -1,38 +1,38 @@
 name: Lint
 on:
-  push:
-    branches:
-      - 'main'
-  pull_request:
-    branches:
-      - 'main'
+    push:
+        branches:
+            - "main"
+    pull_request:
+        branches:
+            - "main"
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+    group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    cancel-in-progress: true
 jobs:
-  test:
-    name: ESLint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    test:
+        name: ESLint
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
 
-      - name: Install Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 18
+            - name: Install Node.js
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 18
 
-      - name: Cache yarn
-        uses: actions/cache@v3
-        with:
-          path: .yarn/cache
-          key: bench-yarn-cache-node-18
+            - name: Cache yarn
+              uses: actions/cache@v3
+              with:
+                  path: .yarn/cache
+                  key: bench-yarn-cache-node-18
 
-      - name: 📥 Install dependencies
-        run: yarn install --immutable
+            - name: 📥 Install dependencies
+              run: yarn install --immutable
 
-      - name: Run ESLint
-        run: yarn run lint
+            - name: Run ESLint
+              run: yarn run lint
 
-      - name: Run TSC
-        run: yarn run check
+            - name: Run TSC
+              run: yarn run check

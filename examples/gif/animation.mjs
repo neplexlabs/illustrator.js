@@ -29,7 +29,7 @@ for (const color of colors) {
 // get animation api
 const animation = illustrator.animation;
 // get all layers and transform to animation frame
-const layers = illustrator.layers.getAllLayers().map(m => ({
+const layers = illustrator.layers.getAllLayers().map((m) => ({
     duration: 500,
     frame: m.layer
 }));

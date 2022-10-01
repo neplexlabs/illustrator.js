@@ -1,6 +1,6 @@
 /**
  * @author SohamSuvarna
-*/
+ */
 
 import { Illustrator, ImageLoader } from "../../dist/index.mjs";
 // Use the following in prod
@@ -51,16 +51,16 @@ const textT = text.tools.get("TextTool");
 textT.setColor("#FFFFFF");
 textT.registerFont(font, "Gotham");
 textT.setFont("Gotham", 40);
-textT.writeText(songTitle, (illustrator.width / 4), (illustrator.height / 2) - 40);
+textT.writeText(songTitle, illustrator.width / 4, illustrator.height / 2 - 40);
 
 textT.setColor("rgba(179,179,179,0.2)");
 textT.setFont("Gotham", 25);
-textT.writeText(artist, (illustrator.width / 4), (illustrator.height / 2) - 7);
+textT.writeText(artist, illustrator.width / 4, illustrator.height / 2 - 7);
 textT.render();
 
 textT.setColor("rgba(179,179,179,0.1)");
 textT.setFont("Gotham", 25);
-textT.writeText(album, (illustrator.width / 4), (illustrator.height / 2) + 20);
+textT.writeText(album, illustrator.width / 4, illustrator.height / 2 + 20);
 textT.render();
 
 let progressbar = illustrator.layers.createLayer({
@@ -77,11 +77,23 @@ textTool
 
 let rect = progressbar.tools.get("RectangleTool");
 rect.fill();
-rect.drawRounded({ x: illustrator.width / 4 + textTool.measure(pd).width + 25, y: illustrator.height / 2 + 60, width: barWidth, height: 5, radius: 5 });
+rect.drawRounded({
+    x: illustrator.width / 4 + textTool.measure(pd).width + 25,
+    y: illustrator.height / 2 + 60,
+    width: barWidth,
+    height: 5,
+    radius: 5
+});
 rect.setFillColor("#1db954");
 
 rect.fill();
-rect.drawRounded({ x: illustrator.width / 4 + textTool.measure(pd).width + 25, y: illustrator.height / 2 + 60, width: totalWidth, height: 5, radius: 5 });
+rect.drawRounded({
+    x: illustrator.width / 4 + textTool.measure(pd).width + 25,
+    y: illustrator.height / 2 + 60,
+    width: totalWidth,
+    height: 5,
+    radius: 5
+});
 rect.setFillColor("rgba(255,255,255,0.3)");
 
 rect.render();
@@ -89,7 +101,7 @@ rect.render();
 await illustrator.render();
 
 const output = await illustrator.export({ encoding: "png" });
-await fs.promises.writeFile("./spotify_card_classic.png", output)
+await fs.promises.writeFile("./spotify_card_classic.png", output);
 
 function formatTime(time) {
     let fmt = new Date(time * 1000).toISOString().slice(14, 19);

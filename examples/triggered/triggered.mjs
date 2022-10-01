@@ -42,7 +42,7 @@ for (let i = 0; i < 9; i++) {
     bgTool.render();
 }
 
-const layers = illustrator.layers.getAllLayers().map(m => ({
+const layers = illustrator.layers.getAllLayers().map((m) => ({
     frame: m.layer
 }));
 

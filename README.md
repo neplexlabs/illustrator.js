@@ -4,7 +4,7 @@
     <p>JavaScript image processing library</p>
 </div>
 
------------------------
+---
 
 # Installation
 
@@ -19,15 +19,15 @@ $ yarn add illustrator.js
 
 # Features
 
-* Illustrator is fast, powered by **[@napi-rs/canvas](https://github.com/Brooooooklyn/canvas)** 🚀
-* Illustrator provides beginner friendly API 🤓
-* TypeScript supported 💪
-* Layers API 🎚️
-* Color utilities API 🎨
-* Filters 📸
-* Tools such as eraser, shapes, text, etc. ⚒️
-* Image manipulation (crop, brightness, blur, sharpness, format conversion, compression and much more..)
-* Animation API (GIF) 😎
+-   Illustrator is fast, powered by **[@napi-rs/canvas](https://github.com/Brooooooklyn/canvas)** 🚀
+-   Illustrator provides beginner friendly API 🤓
+-   TypeScript supported 💪
+-   Layers API 🎚️
+-   Color utilities API 🎨
+-   Filters 📸
+-   Tools such as eraser, shapes, text, etc. ⚒️
+-   Image manipulation (crop, brightness, blur, sharpness, format conversion, compression and much more..)
+-   Animation API (GIF) 😎
 
 and more...
 
@@ -73,7 +73,7 @@ for (const color of colors) {
 // get animation api
 const animation = illustrator.animation;
 // get all layers and transform to animation frame
-const layers = illustrator.layers.getAllLayers().map(m => ({
+const layers = illustrator.layers.getAllLayers().map((m) => ({
     duration: 500,
     frame: m.layer
 }));
@@ -106,6 +106,7 @@ It may be hard to get simple things done via this library.
 Check out **[Canvacord](https://github.com/CesiumLabs/canvacord)** for beginner-friendly utility APIs, built with **Illustrator.js**.
 
 # Special thanks to 💖
+
 [Brooooooklyn](https://github.com/Brooooooklyn) and the people behind [napi-rs](https://github.com/napi-rs). Illustrator.js is here only because of their hard work behind the projects under napi-rs.
 
 # Discord
