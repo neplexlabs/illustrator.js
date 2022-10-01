@@ -1,27 +1,27 @@
 name: Publish
 on:
-    release:
-        types: [created]
+  release:
+    types: [created]
 concurrency:
-    group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-    cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
-    publish-npm:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v1
-              with:
-                  node-version: 18
-                  registry-url: https://registry.npmjs.org/
-            - name: Cache yarn
-              uses: actions/cache@v3
-              with:
-                  path: .yarn/cache
-                  key: bench-yarn-cache-node-18
-            - name: 📥 Install dependencies
-              run: yarn install --immutable
-            - run: yarn build
-            - run: npm publish --access public
-              env:
-                  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: .yarn/cache
+          key: bench-yarn-cache-node-18
+      - name: 📥 Install dependencies
+        run: yarn install --immutable
+      - run: yarn build
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
