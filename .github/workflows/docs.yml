@@ -1,34 +1,34 @@
 name: Documentation
 on:
-    push:
-        branches:
-            - "main"
+  push:
+    branches:
+      - 'main'
 concurrency:
-    group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-    cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
-    build:
-        name: Build Documentation
-        runs-on: ubuntu-latest
-        steps:
-            - name: 👀 Checkout repository
-              uses: actions/checkout@v2
+  build:
+    name: Build Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: 👀 Checkout repository
+        uses: actions/checkout@v2
 
-            - name: 📥 Install Node.js
-              uses: actions/setup-node@master
-              with:
-                  node-version: 18
+      - name: 📥 Install Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 18
 
-            - name: Cache yarn
-              uses: actions/cache@v3
-              with:
-                  path: .yarn/cache
-                  key: bench-yarn-cache-node-18
+      - name: Cache yarn
+        uses: actions/cache@v3
+        with:
+          path: .yarn/cache
+          key: bench-yarn-cache-node-18
 
-            - name: 📥 Install dependencies
-              run: yarn install --immutable
+      - name: 📥 Install dependencies
+        run: yarn install --immutable
 
-            - name: 📃 Run Docs Generator
-              uses: ./.github/actions/docs
-              env:
-                  GITHUB_TOKEN: ${{ secrets.CESIUM_BOT_TOKEN }}
+      - name: 📃 Run Docs Generator
+        uses: ./.github/actions/docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.CESIUM_BOT_TOKEN }}
