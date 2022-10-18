@@ -1,4 +1,4 @@
-FROM node:18-slim
+FROM node:19-slim
 
 LABEL com.github.actions.name="Documentation Generator"
 LABEL com.github.actions.description="Commit generated documentation to the docs branch."
