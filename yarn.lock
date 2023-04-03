@@ -2025,11 +2025,11 @@ __metadata:
   linkType: hard
 
 "@skyra/gifenc@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@skyra/gifenc@npm:1.0.0"
+  version: 1.0.1
+  resolution: "@skyra/gifenc@npm:1.0.1"
   dependencies:
-    tslib: ^2.3.0
-  checksum: 1f9743bd39211cda58f3a11431cca56fd6e87e0306b1a4d2e1c7e70b7852b5a3cac3ad1a1f33dbb7232b00099abf86537389e93fbc983bd601109a55c42af278
+    tslib: ^2.4.0
+  checksum: a738744ad9425f1fad5618c36aa4a8284da395ac18a56e226fb8d0887a07ac1bd9bd55a93fece2a1a2a5417a2db6da760aed2351fee1b1110635e81fe79498ed
   languageName: node
   linkType: hard
 
@@ -7397,7 +7397,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.3.0, tslib@npm:^2.4.0":
+"tslib@npm:^2.4.0":
   version: 2.4.0
   resolution: "tslib@npm:2.4.0"
   checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
