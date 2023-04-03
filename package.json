@@ -54,7 +54,7 @@
       "@commitlint/cli": "17.0.3",
       "@commitlint/config-angular": "17.0.3",
       "@compodoc/compodoc": "1.1.19",
-      "@types/node": "18.7.1",
+      "@types/node": "18.15.11",
       "@typescript-eslint/eslint-plugin": "5.33.0",
       "@typescript-eslint/parser": "5.33.0",
       "conventional-changelog-cli": "2.2.2",
