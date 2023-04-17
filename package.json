@@ -51,8 +51,8 @@
     },
     "homepage": "https://illustrator.js.org",
     "devDependencies": {
-      "@commitlint/cli": "17.0.3",
-      "@commitlint/config-angular": "17.0.3",
+      "@commitlint/cli": "17.6.1",
+      "@commitlint/config-angular": "17.6.1",
       "@compodoc/compodoc": "1.1.19",
       "@types/node": "18.7.1",
       "@typescript-eslint/eslint-plugin": "5.33.0",
